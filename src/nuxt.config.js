@@ -47,6 +47,11 @@ module.exports = {
     appId: "1:825404803784:web:adf329278e1e410e3833fd",
     measurementId: "G-31P3BJ2ZPT"
   },
+  services: {
+    auth: true,
+    firestore: true,
+    realtimeDb: true
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
