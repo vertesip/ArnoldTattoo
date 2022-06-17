@@ -40,7 +40,7 @@ jobs:
         uses: actions/upload-artifact@master
         with:
           name: BuiltNuxt
-          path: src/.nuxt
+          path: public/_nuxt
   deploy:
     name: Deploy
     needs: build
@@ -52,7 +52,7 @@ jobs:
         uses: actions/download-artifact@master
         with:
           name: BuiltNuxt
-          path: src/.nuxt
+          path: public/_nuxt
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
