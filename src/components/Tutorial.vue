@@ -72,9 +72,7 @@
           >, whether you are new or have previous experience with the
           framework.<br />
         </p>
-        <p class="mt-4 pt-4 text-gray-800 border-t border-dashed">
-          asdasdasdasdasdsadasdasdasdasd
-        </p>
+        <p class="mt-4 pt-4 text-gray-800 border-t border-dashed">pls</p>
       </div>
       <div class="flex justify-center pt-4 space-x-2">
         <a href="https://github.com/nuxt/nuxt.js" target="_blank"
