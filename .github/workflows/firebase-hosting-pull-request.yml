@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: rm -rf public/* && mkdir -p public/_nuxt && cp -r src/.nuxt/dist/client/ public/_nuxt && cp -a src/static/. public/
+      - run: cd src && npm ci && npm run build && cd .. && rm -rf public/* && mkdir -p public/_nuxt && cp -r src/.nuxt/dist/client/ public/_nuxt && cp -a src/static/. public/
         with:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
           firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_ARNOLDTATTOO }}"
