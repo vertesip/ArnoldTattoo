@@ -11,7 +11,7 @@
   },
   "hosting": {
     "predeploy": [
-      ""
+      "rm -rf public/* && mkdir -p public/_nuxt && cp -r src/.nuxt/dist/client/ public/_nuxt && cp -a src/static/. public/"
     ],
     "public": "public",
     "ignore": [
