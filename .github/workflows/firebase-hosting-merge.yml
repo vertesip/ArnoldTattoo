@@ -40,7 +40,7 @@ jobs:
         uses: actions/upload-artifact@master
         with:
           name: BuiltNuxt
-          path: public/_nuxt
+          path: publics/_nuxt
   deploy:
     name: Deploy
     needs: build
@@ -56,6 +56,6 @@ jobs:
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
-          args: deploy --only hosting
+          args: deploy
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
