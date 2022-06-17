@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: rm -rf public/* && mkdir -p public/_nuxt && cp -r src/.nuxt/dist/client/ public/_nuxt && cp -a src/static/. public/ && cd src && npm ci && npm run build
+      - run: rm -rf public/* && mkdir -p public/_nuxt && cp -r src/.nuxt/dist/client/ public/_nuxt && cp -a src/static/. public/
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
