@@ -40,7 +40,7 @@ jobs:
         uses: actions/upload-artifact@master
         with:
           name: BuiltNuxt
-          path: publics/_nuxt
+          path: public/_nuxt
   deploy:
     name: Deploy
     needs: build
