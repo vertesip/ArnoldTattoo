@@ -1,16 +1,16 @@
 <template>
-  <nav class="fixed w-full p-6 bg-transparent">
-    <div class="flex items-center justify-between">
+  <nav class="fixed w-full h-12 px-5">
+    <div class="flex items-center justify-between h-full max-w-7xl m-auto">
       <!-- Header logo -->
       <div>
-        <span>logo</span>
+        <img src="logo.png" class="max-h-10" alt="Arnold Tattoo Logo">
       </div>
 
       <!-- Mobile toggle -->
       <div class="md:hidden">
-        <button @click="drawer">
+        <button @click="drawer" class="flex">
           <svg
-            class="h-8 w-8 fill-current text-black"
+            class="h-8 w-8 fill-current text-white"
             fill="none"
             stroke-linecap="round"
             stroke-linejoin="round"
@@ -25,29 +25,14 @@
 
       <!-- Navbar -->
       <div class="hidden md:block">
-        <ul class="flex space-x-8 text-sm font-sans">
+        <ul class="flex space-x-8 text-sm font-sans text-white">
           <li>
-            <a href="#" class="active border-b-2 border-blue-500 pb-1">Home</a>
+            <a href="#" class="active border-b-2 pb-1">Rólam</a>
           </li>
-          <li><a href="#" class="">Services</a></li>
-          <li><a href="#" class="">Features</a></li>
-          <li><a href="#" class="">FAQ</a></li>
-          <li><a href="#" class="">Contact</a></li>
-          <li>
-            <a
-              href="#"
-              class="
-                cta
-                bg-blue-500
-                hover:bg-blue-600
-                px-3
-                py-2
-                rounded
-                text-white
-                font-semibold
-              "
-            >Sign Up</a>
-          </li>
+          <li><a href="#" class="">Galéria</a></li>
+          <li><a href="#" class="">Időpontfoglalás</a></li>
+          <li><a href="#" class="">Pólók</a></li>
+          <li><a href="#" class="">Kapcsolat</a></li>
         </ul>
       </div>
 
@@ -81,7 +66,6 @@
           top-0
           left-0
           w-64
-          bg-white
           fixed
           h-full
           overflow-auto
@@ -115,10 +99,10 @@
           class="flex w-full items-center p-4 border-b"
           @click="isOpen = false"
         >
-          <span>logo</span>
+          <img src="logo.png" class="max-h-10" alt="Arnold Tattoo Logo">
         </span>
 
-        <ul class="divide-y font-sans">
+        <ul class="divide-y font-sans text-white">
           <li>
             <a
               href="#"
@@ -153,26 +137,6 @@
               class="my-4 inline-block"
               @click="isOpen = false"
             >Contact</a>
-          </li>
-          <li>
-            <a
-              href="#"
-              class="
-                my-8
-                w-full
-                text-center
-                font-semibold
-                cta
-                inline-block
-                bg-blue-500
-                hover:bg-blue-600
-                px-3
-                py-2
-                rounded
-                text-white
-              "
-              @click="isOpen = false"
-            >Sign Up</a>
           </li>
         </ul>
 
@@ -269,14 +233,20 @@ export default {
       immediate: true,
       handler (isOpen) {
         if (process.client) {
-          if (isOpen) { document.body.style.setProperty('overflow', 'hidden') } else { document.body.style.removeProperty('overflow') }
+          if (isOpen) {
+            document.body.style.setProperty('overflow', 'hidden')
+          } else {
+            document.body.style.removeProperty('overflow')
+          }
         }
       }
     }
   },
   mounted () {
     document.addEventListener('keydown', (e) => {
-      if (e.keyCode === 27 && this.isOpen) { this.isOpen = false }
+      if (e.keyCode === 27 && this.isOpen) {
+        this.isOpen = false
+      }
     })
   },
   methods: {
@@ -286,3 +256,13 @@ export default {
   }
 }
 </script>
+<style scoped>
+#__layout > nav,
+#__layout > nav > div > aside {
+  background: #0e0e0e;
+}
+
+li .active {
+  border-bottom-color: #aa923b;
+}
+</style>
