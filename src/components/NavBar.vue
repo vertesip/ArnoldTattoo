@@ -8,7 +8,7 @@
 
       <!-- Mobile toggle -->
       <div class="md:hidden">
-        <button @click="drawer" class="flex">
+        <button class="flex" @click="drawer">
           <svg
             class="h-8 w-8 fill-current text-white"
             fill="none"
