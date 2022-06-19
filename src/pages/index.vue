@@ -1,5 +1,8 @@
 <template>
-  <NavBar />
+  <main>
+    <NavBar />
+    <BookingSection />
+  </main>
 </template>
 
 <script>

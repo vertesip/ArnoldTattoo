@@ -1,5 +1,5 @@
 <template>
-  <nav class="fixed w-full h-12 px-5">
+  <nav class="sticky w-full h-12 px-5">
     <div class="flex items-center justify-between h-full max-w-7xl m-auto">
       <!-- Header logo -->
       <div>
@@ -257,8 +257,8 @@ export default {
 }
 </script>
 <style scoped>
-#__layout > nav,
-#__layout > nav > div > aside {
+#__layout > main > nav,
+#__layout > main > nav > div > aside {
   background: #0e0e0e;
 }
 
