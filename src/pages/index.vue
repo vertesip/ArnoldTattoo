@@ -1,6 +1,7 @@
 <template>
   <main>
     <NavBar />
+    <BannerSection />
     <BookingSection />
     <FooterElement />
   </main>

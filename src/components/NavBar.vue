@@ -1,5 +1,5 @@
 <template>
-  <nav class="sticky w-full h-12 px-5">
+  <nav class="fixed z-10 w-full h-12 px-5">
     <div class="flex items-center justify-between h-full max-w-7xl m-auto">
       <!-- Header logo -->
       <div>
