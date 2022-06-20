@@ -29,30 +29,30 @@ module.exports = {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
-    // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['@nuxtjs/firebase'],
+  modules: ['@nuxtjs/firebase',
+    '@nuxtjs/eslint-module',
+    '@nuxtjs/tailwindcss'],
   firebase: {
     config: {
-      apiKey: "AIzaSyCAi1U-S3YNGcG-YitKZh_5FVV6GaaQOE4",
-      authDomain: "arnoldtattoo.firebaseapp.com",
-      databaseURL: "https://arnoldtattoo-default-rtdb.europe-west1.firebasedatabase.app",
-      projectId: "arnoldtattoo",
-      storageBucket: "arnoldtattoo.appspot.com",
-      messagingSenderId: "825404803784",
-      appId: "1:825404803784:web:adf329278e1e410e3833fd",
-      measurementId: "G-31P3BJ2ZPT"
+      apiKey: 'AIzaSyCAi1U-S3YNGcG-YitKZh_5FVV6GaaQOE4',
+      authDomain: 'arnoldtattoo.firebaseapp.com',
+      databaseURL: 'https://arnoldtattoo-default-rtdb.europe-west1.firebasedatabase.app',
+      projectId: 'arnoldtattoo',
+      storageBucket: 'arnoldtattoo.appspot.com',
+      messagingSenderId: '825404803784',
+      appId: '1:825404803784:web:adf329278e1e410e3833fd',
+      measurementId: 'G-31P3BJ2ZPT'
     },
     services: {
       auth: true,
       firestore: true,
       realtimeDb: true
-    },
+    }
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

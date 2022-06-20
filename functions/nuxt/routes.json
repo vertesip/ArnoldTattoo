@@ -1,5 +1,12 @@
 [
   {
+    "name": "privacy-policy",
+    "path": "/privacy-policy",
+    "component": "/home/patrik/dev/ArnoldTattoo/src/pages/privacy-policy/index.vue",
+    "chunkName": "pages/privacy-policy/index",
+    "_name": "_8e83cc42"
+  },
+  {
     "name": "index",
     "path": "/",
     "component": "/home/patrik/dev/ArnoldTattoo/src/pages/index.vue",

@@ -1,5 +1,7 @@
-export const NuxtLogo = () => import('../../components/NuxtLogo.vue' /* webpackChunkName: "components/nuxt-logo" */).then(c => wrapFunctional(c.default || c))
-export const Tutorial = () => import('../../components/Tutorial.vue' /* webpackChunkName: "components/tutorial" */).then(c => wrapFunctional(c.default || c))
+export const BannerSection = () => import('../../components/BannerSection.vue' /* webpackChunkName: "components/banner-section" */).then(c => wrapFunctional(c.default || c))
+export const BookingSection = () => import('../../components/BookingSection.vue' /* webpackChunkName: "components/booking-section" */).then(c => wrapFunctional(c.default || c))
+export const FooterElement = () => import('../../components/FooterElement.vue' /* webpackChunkName: "components/footer-element" */).then(c => wrapFunctional(c.default || c))
+export const NavBar = () => import('../../components/NavBar.vue' /* webpackChunkName: "components/nav-bar" */).then(c => wrapFunctional(c.default || c))
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {
