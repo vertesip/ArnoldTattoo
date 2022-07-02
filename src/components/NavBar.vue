@@ -1,25 +1,23 @@
 <template>
-  <nav class="fixed z-10 w-full h-12 px-5">
+  <nav class="nav transparent transparent-nav fixed z-10 w-full h-12 px-5">
     <div class="flex items-center justify-between h-full max-w-7xl m-auto">
       <!-- Header logo -->
       <div>
-        <img src="logo.png" class="max-h-10" alt="Arnold Tattoo Logo">
+        <img
+          src="logo.png"
+          class="logo transparent-logo max-h-10"
+          alt="Arnold Tattoo Logo"
+        >
       </div>
 
       <!-- Mobile toggle -->
       <div class="md:hidden">
-        <button class="flex" @click="drawer">
-          <svg
-            class="h-8 w-8 fill-current text-white"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
+        <button class="text-gray-500 w-10 h-10 relative focus:outline-none" @click="drawer">
+          <div class="block w-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+            <span aria-hidden="true" class="block absolute h-0.5 w-5 bg-white transform transition duration-500 ease-in-out" :class="isOpen ? 'rotate-45' : '-translate-y-1.5'" />
+            <span aria-hidden="true" class="block absolute  h-0.5 w-5 bg-white transform transition duration-500 ease-in-out" :class="isOpen ? 'opacity-0' : ''" />
+            <span aria-hidden="true" class="block absolute  h-0.5 w-5 bg-white transform  transition duration-500 ease-in-out" :class="isOpen ? '-rotate-45' : 'translate-y-1.5'" />
+          </div>
         </button>
       </div>
 
@@ -95,48 +93,41 @@
           </button>
         </div>
 
-        <span
-          class="flex w-full items-center p-4 border-b"
-          @click="isOpen = false"
-        >
-          <img src="logo.png" class="max-h-10" alt="Arnold Tattoo Logo">
-        </span>
-
         <ul class="divide-y font-sans text-white">
           <li>
             <a
               href="#"
               class="my-4 inline-block"
               @click="isOpen = false"
-            >Home</a>
+            >Rólam</a>
           </li>
           <li>
             <a
               href="#"
               class="my-4 inline-block"
               @click="isOpen = false"
-            >Services</a>
+            >Galéria</a>
           </li>
           <li>
             <a
               href="#"
               class="my-4 inline-block"
               @click="isOpen = false"
-            >Features</a>
+            >Időpontfoglalás</a>
           </li>
           <li>
             <a
               href="#"
               class="my-4 inline-block"
               @click="isOpen = false"
-            >FAQ</a>
+            >Pólók</a>
           </li>
           <li>
             <a
               href="#"
               class="my-4 inline-block"
               @click="isOpen = false"
-            >Contact</a>
+            >Kapcsolat</a>
           </li>
         </ul>
 
@@ -151,7 +142,7 @@
                 focusable="false"
                 data-prefix="fab"
                 data-icon="twitter"
-                class="h-5 w-5 fill-current text-gray-600"
+                class="h-5 w-5 fill-current text-white"
                 role="img"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 512 512"
@@ -168,7 +159,7 @@
                 focusable="false"
                 data-prefix="fab"
                 data-icon="facebook-f"
-                class="h-5 w-5 fill-current text-gray-600"
+                class="h-5 w-5 fill-current text-white"
                 role="img"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 320 512"
@@ -185,7 +176,7 @@
                 focusable="false"
                 data-prefix="fab"
                 data-icon="instagram"
-                class="h-5 w-5 fill-current text-gray-600"
+                class="h-5 w-5 fill-current text-white"
                 role="img"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 448 512"
@@ -202,7 +193,7 @@
                 focusable="false"
                 data-prefix="fab"
                 data-icon="youtube"
-                class="h-5 w-5 fill-current text-gray-600"
+                class="h-5 w-5 fill-current text-white"
                 role="img"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 576 512"
@@ -243,26 +234,101 @@ export default {
     }
   },
   mounted () {
+    window.addEventListener('scroll', this.onScroll)
+
+    const nav = document.querySelector('.nav')
+    const logo = document.querySelector('.logo')
+
+    this.windowTop = window.top.scrollY
+    if (window.top.scrollY !== 0) {
+      nav.classList.remove('transparent-nav')
+      logo.classList.remove('transparent-logo')
+    }
+
     document.addEventListener('keydown', (e) => {
       if (e.keyCode === 27 && this.isOpen) {
         this.isOpen = false
       }
     })
   },
+  beforeDestroy () {
+    window.removeEventListener('scroll', this.onScroll)
+  },
   methods: {
+    onScroll (e) {
+      const nav = document.querySelector('.nav')
+      const logo = document.querySelector('.logo')
+
+      this.windowTop = window.top.scrollY
+      if (window.top.scrollY === 0) {
+        nav.classList.add('transparent-nav')
+        logo.classList.add('transparent-logo')
+      } else {
+        nav.classList.remove('transparent-nav')
+        logo.classList.remove('transparent-logo')
+      }
+    },
     drawer () {
       this.isOpen = !this.isOpen
     }
   }
 }
 </script>
-<style scoped>
-#__layout > main > nav,
-#__layout > main > nav > div > aside {
+<style>
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
   background: #0e0e0e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4a4a4a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cfcfcf;
+}
+
+.nav,
+.nav > div > aside {
+  background: #0e0e0e;
+  transition: 0.2s;
+}
+
+#__layout > main > nav {
+  transition: 0.2s;
+}
+
+.nav {
+  transition: 0.2s;
+  height: 50px;
+}
+
+.logo {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+.transparent-nav {
+  background: transparent;
+  height: 100px;
+}
+
+.transparent-logo {
+  opacity: 0;
 }
 
 li .active {
   border-bottom-color: #aa923b;
+}
+
+ul li a {
+  text-shadow: 1px 1px black;
 }
 </style>
