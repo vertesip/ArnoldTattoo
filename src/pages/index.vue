@@ -5,6 +5,7 @@
     <AboutMeSection />
     <BookingSection />
     <GallerySection />
+    <ShirtsSection />
     <FooterElement />
   </main>
 </template>
