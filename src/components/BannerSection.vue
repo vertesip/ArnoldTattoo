@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <section>
     <img class="logo" src="logo.png" alt="Logo">
     <img class="banner" src="bg_logo_nelkul.png" alt="Banner">
-  </div>
+  </section>
 </template>
 
 <script>
@@ -12,7 +12,8 @@ export default {
 </script>
 
 <style scoped>
-div{
+section{
+    background: #0D0D0D;
     position: relative;
 }
 .banner {

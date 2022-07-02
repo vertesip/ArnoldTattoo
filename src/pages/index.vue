@@ -2,6 +2,7 @@
   <main>
     <NavBar />
     <BannerSection />
+    <AboutMeSection />
     <BookingSection />
     <FooterElement />
   </main>
