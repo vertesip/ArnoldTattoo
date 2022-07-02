@@ -4,6 +4,7 @@
     <BannerSection />
     <AboutMeSection />
     <BookingSection />
+    <GallerySection />
     <FooterElement />
   </main>
 </template>
