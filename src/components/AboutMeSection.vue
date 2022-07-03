@@ -1,5 +1,6 @@
 <template>
   <section>
+    <img class="mx-auto" src="at.png" alt="Arnold Tattoo">
     <p class="text-white max-w-7xl mx-auto text-center p-4">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
       similique atque ut dolore inventore. Temporibus eos adipisci eius,

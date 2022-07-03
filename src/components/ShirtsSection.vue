@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section style="background-image: url('ship.jpeg');">
     <div class="flex max-w-7xl mx-auto p-4 flex-wrap justify-around">
       <img class="max-w-md w-full" src="shirt2.jpg">
       <p class="text-white flex items-center">
@@ -18,5 +18,7 @@ export default {
 <style scoped>
 section {
   background: #0d0d0d;
+  z-index: 0;
+  background-size: cover;
 }
 </style>

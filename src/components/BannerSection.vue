@@ -20,6 +20,9 @@ section{
   height: 100vh;
   width: 100%;
   object-fit: cover;
+
+  -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
 }
 
 .logo{
@@ -30,5 +33,7 @@ section{
     bottom: 0;
     margin: auto;
     max-height: -webkit-fill-available;
+
+    z-index: 1;
 }
 </style>

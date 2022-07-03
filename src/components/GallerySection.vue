@@ -1,5 +1,6 @@
 <template>
-  <section>
+  <section style="background-image: url('background.jpg')">
+    <img class="mx-auto my-20" src="gallery.png" alt="Gallery header">
     <div class="container mx-auto relative">
       <div
         class="flex items-center justify-between absolute inset-0 w-full h-full"
@@ -9,14 +10,14 @@
           role="button"
           aria-label="slide forward"
           class="
-          z-30
-          ml-10
-          focus:outline-none
-          focus:bg-gray-400
-          focus:ring-2
-          focus:ring-offset-2
-          focus:ring-gray-400
-        "
+            z-30
+            ml-10
+            focus:outline-none
+            focus:bg-gray-400
+            focus:ring-2
+            focus:ring-offset-2
+            focus:ring-gray-400
+          "
           @click="showPrev"
         >
           <svg
@@ -40,14 +41,14 @@
           role="button"
           aria-label="slide forward"
           class="
-          z-30
-          mr-16
-          focus:outline-none
-          focus:bg-gray-400
-          focus:ring-2
-          focus:ring-offset-2
-          focus:ring-gray-400
-        "
+            z-30
+            mr-16
+            focus:outline-none
+            focus:bg-gray-400
+            focus:ring-2
+            focus:ring-offset-2
+            focus:ring-gray-400
+          "
           @click="showNext"
         >
           <svg
@@ -68,7 +69,16 @@
         </button>
       </div>
       <div
-        class="flex items-center justify-center w-full h-full py-24 sm:py-8 px-4"
+        class="
+          flex
+          items-center
+          justify-center
+          w-full
+          h-full
+          py-24
+          sm:py-8
+          px-4
+        "
       >
         <div class="slider">
           <div class="slide-ana">
@@ -85,25 +95,25 @@
                   >
                     <h2
                       class="
-                      lg:text-xl
-                      leading-4
-                      text-base
-                      lg:leading-5
-                      text-white
-                    "
+                        lg:text-xl
+                        leading-4
+                        text-base
+                        lg:leading-5
+                        text-white
+                      "
                     >
                       Catalog 1
                     </h2>
                     <div class="flex h-full items-end pb-6">
                       <h3
                         class="
-                        text-xl
-                        lg:text-2xl
-                        font-semibold
-                        leading-5
-                        lg:leading-6
-                        text-white
-                      "
+                          text-xl
+                          lg:text-2xl
+                          font-semibold
+                          leading-5
+                          lg:leading-6
+                          text-white
+                        "
                       >
                         Minimal Interior
                       </h3>
@@ -123,25 +133,25 @@
                   >
                     <h2
                       class="
-                      lg:text-xl
-                      leading-4
-                      text-base
-                      lg:leading-5
-                      text-white
-                    "
+                        lg:text-xl
+                        leading-4
+                        text-base
+                        lg:leading-5
+                        text-white
+                      "
                     >
                       Catalog 2
                     </h2>
                     <div class="flex h-full items-end pb-6">
                       <h3
                         class="
-                        text-xl
-                        lg:text-2xl
-                        font-semibold
-                        leading-5
-                        lg:leading-6
-                        text-white
-                      "
+                          text-xl
+                          lg:text-2xl
+                          font-semibold
+                          leading-5
+                          lg:leading-6
+                          text-white
+                        "
                       >
                         Minimal Interior
                       </h3>
@@ -161,25 +171,25 @@
                   >
                     <h2
                       class="
-                      lg:text-xl
-                      leading-4
-                      text-base
-                      lg:leading-5
-                      text-white
-                    "
+                        lg:text-xl
+                        leading-4
+                        text-base
+                        lg:leading-5
+                        text-white
+                      "
                     >
                       Catalog 2
                     </h2>
                     <div class="flex h-full items-end pb-6">
                       <h3
                         class="
-                        text-xl
-                        lg:text-2xl
-                        font-semibold
-                        leading-5
-                        lg:leading-6
-                        text-white
-                      "
+                          text-xl
+                          lg:text-2xl
+                          font-semibold
+                          leading-5
+                          lg:leading-6
+                          text-white
+                        "
                       >
                         Minimal Interior
                       </h3>
@@ -199,25 +209,25 @@
                   >
                     <h2
                       class="
-                      lg:text-xl
-                      leading-4
-                      text-base
-                      lg:leading-5
-                      text-white
-                    "
+                        lg:text-xl
+                        leading-4
+                        text-base
+                        lg:leading-5
+                        text-white
+                      "
                     >
                       Catalog 2
                     </h2>
                     <div class="flex h-full items-end pb-6">
                       <h3
                         class="
-                        text-xl
-                        lg:text-2xl
-                        font-semibold
-                        leading-5
-                        lg:leading-6
-                        text-white
-                      "
+                          text-xl
+                          lg:text-2xl
+                          font-semibold
+                          leading-5
+                          lg:leading-6
+                          text-white
+                        "
                       >
                         Minimal Interior
                       </h3>
@@ -237,25 +247,25 @@
                   >
                     <h2
                       class="
-                      lg:text-xl
-                      leading-4
-                      text-base
-                      lg:leading-5
-                      text-white
-                    "
+                        lg:text-xl
+                        leading-4
+                        text-base
+                        lg:leading-5
+                        text-white
+                      "
                     >
                       Catalog 2
                     </h2>
                     <div class="flex h-full items-end pb-6">
                       <h3
                         class="
-                        text-xl
-                        lg:text-2xl
-                        font-semibold
-                        leading-5
-                        lg:leading-6
-                        text-white
-                      "
+                          text-xl
+                          lg:text-2xl
+                          font-semibold
+                          leading-5
+                          lg:leading-6
+                          text-white
+                        "
                       >
                         Minimal Interior
                       </h3>
@@ -275,25 +285,25 @@
                   >
                     <h2
                       class="
-                      lg:text-xl
-                      leading-4
-                      text-base
-                      lg:leading-5
-                      text-white
-                    "
+                        lg:text-xl
+                        leading-4
+                        text-base
+                        lg:leading-5
+                        text-white
+                      "
                     >
                       Catalog 2
                     </h2>
                     <div class="flex h-full items-end pb-6">
                       <h3
                         class="
-                        text-xl
-                        lg:text-2xl
-                        font-semibold
-                        leading-5
-                        lg:leading-6
-                        text-white
-                      "
+                          text-xl
+                          lg:text-2xl
+                          font-semibold
+                          leading-5
+                          lg:leading-6
+                          text-white
+                        "
                       >
                         Minimal Interior
                       </h3>
@@ -313,25 +323,25 @@
                   >
                     <h2
                       class="
-                      lg:text-xl
-                      leading-4
-                      text-base
-                      lg:leading-5
-                      text-white
-                    "
+                        lg:text-xl
+                        leading-4
+                        text-base
+                        lg:leading-5
+                        text-white
+                      "
                     >
                       Catalog 2
                     </h2>
                     <div class="flex h-full items-end pb-6">
                       <h3
                         class="
-                        text-xl
-                        lg:text-2xl
-                        font-semibold
-                        leading-5
-                        lg:leading-6
-                        text-white
-                      "
+                          text-xl
+                          lg:text-2xl
+                          font-semibold
+                          leading-5
+                          lg:leading-6
+                          text-white
+                        "
                       >
                         Minimal Interior
                       </h3>
@@ -351,25 +361,25 @@
                   >
                     <h2
                       class="
-                      lg:text-xl
-                      leading-4
-                      text-base
-                      lg:leading-5
-                      text-white
-                    "
+                        lg:text-xl
+                        leading-4
+                        text-base
+                        lg:leading-5
+                        text-white
+                      "
                     >
                       Catalog 2
                     </h2>
                     <div class="flex h-full items-end pb-6">
                       <h3
                         class="
-                        text-xl
-                        lg:text-2xl
-                        font-semibold
-                        leading-5
-                        lg:leading-6
-                        text-white
-                      "
+                          text-xl
+                          lg:text-2xl
+                          font-semibold
+                          leading-5
+                          lg:leading-6
+                          text-white
+                        "
                       >
                         Minimal Interior
                       </h3>
@@ -389,25 +399,25 @@
                   >
                     <h2
                       class="
-                      texlg:t-xl
-                      le
-                      leading-4
-                      text-basealg:ding-tight
-                      text-white
-                    "
+                        texlg:t-xl
+                        le
+                        leading-4
+                        text-basealg:ding-tight
+                        text-white
+                      "
                     >
                       Catalog 2
                     </h2>
                     <div class="flex h-full items-end pb-6">
                       <h3
                         class="
-                        text-xl
-                        lg:text-2xl
-                        font-semibold
-                        leading-5
-                        lg:leading-6
-                        text-white
-                      "
+                          text-xl
+                          lg:text-2xl
+                          font-semibold
+                          leading-5
+                          lg:leading-6
+                          text-white
+                        "
                       >
                         Minimal Interior
                       </h3>
@@ -427,25 +437,25 @@
                   >
                     <h2
                       class="
-                      lg:text-xl
-                      leading-4
-                      text-base
-                      lg:leading-5
-                      text-white
-                    "
+                        lg:text-xl
+                        leading-4
+                        text-base
+                        lg:leading-5
+                        text-white
+                      "
                     >
                       Catalog 2
                     </h2>
                     <div class="flex h-full items-end pb-6">
                       <h3
                         class="
-                        text-xl
-                        lg:text-2xl
-                        font-semibold
-                        leading-5
-                        lg:leading-6
-                        text-white
-                      "
+                          text-xl
+                          lg:text-2xl
+                          font-semibold
+                          leading-5
+                          lg:leading-6
+                          text-white
+                        "
                       >
                         Minimal Interior
                       </h3>
@@ -465,25 +475,25 @@
                   >
                     <h2
                       class="
-                      lg:text-xl
-                      leading-4
-                      text-base
-                      lg:leading-5
-                      text-white
-                    "
+                        lg:text-xl
+                        leading-4
+                        text-base
+                        lg:leading-5
+                        text-white
+                      "
                     >
                       Catalog 2
                     </h2>
                     <div class="flex h-full items-end pb-6">
                       <h3
                         class="
-                        text-xl
-                        lg:text-2xl
-                        font-semibold
-                        leading-5
-                        lg:leading-6
-                        text-white
-                      "
+                          text-xl
+                          lg:text-2xl
+                          font-semibold
+                          leading-5
+                          lg:leading-6
+                          text-white
+                        "
                       >
                         Minimal Interior
                       </h3>
@@ -503,25 +513,25 @@
                   >
                     <h2
                       class="
-                      lg:text-xl
-                      leading-4
-                      text-base
-                      lg:leading-5
-                      text-white
-                    "
+                        lg:text-xl
+                        leading-4
+                        text-base
+                        lg:leading-5
+                        text-white
+                      "
                     >
                       Catalog 2
                     </h2>
                     <div class="flex h-full items-end pb-6">
                       <h3
                         class="
-                        text-xl
-                        lg:text-2xl
-                        font-semibold
-                        leading-5
-                        lg:leading-6
-                        text-white
-                      "
+                          text-xl
+                          lg:text-2xl
+                          font-semibold
+                          leading-5
+                          lg:leading-6
+                          text-white
+                        "
                       >
                         Minimal Interior
                       </h3>
@@ -590,7 +600,18 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap");
 @import url("https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css");
 section {
-    background: #0D0D0D;
+  background: #0d0d0d;
+  background: linear-gradient(to bottom, black 50%, transparent 100%),
+    linear-gradient(to top, black 50%, transparent 100%);
+  background-size: cover;
+}
+.gallery-background {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+
+  /*-webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);*/
+  /*mask-image: linear-gradient(to bottom, black 50%, transparent 100%);*/
 }
 .slider {
   width: 100%;

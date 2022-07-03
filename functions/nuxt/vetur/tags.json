@@ -1,4 +1,7 @@
 {
+  "AboutMeSection": {
+    "description": "Auto imported from components/AboutMeSection.vue"
+  },
   "BannerSection": {
     "description": "Auto imported from components/BannerSection.vue"
   },
@@ -8,7 +11,13 @@
   "FooterElement": {
     "description": "Auto imported from components/FooterElement.vue"
   },
+  "GallerySection": {
+    "description": "Auto imported from components/GallerySection.vue"
+  },
   "NavBar": {
     "description": "Auto imported from components/NavBar.vue"
+  },
+  "ShirtsSection": {
+    "description": "Auto imported from components/ShirtsSection.vue"
   }
 }
