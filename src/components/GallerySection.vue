@@ -1,5 +1,8 @@
 <template>
-  <section class="relative" style="background-image: url('background.jpg')">
+  <section
+    class="relative"
+    style="background-image: linear-gradient( to bottom, rgba(13,13,13,1), rgba(13,13,13,0), rgba(13,13,13,1) ),linear-gradient( to top, rgba(13,13,13,1), rgba(13,13,13,0.8), rgba(13,13,13,1) ),url(background.jpg);"
+  >
     <img class="mx-auto my-20" src="gallery.png" alt="Gallery header">
 
     <div class="lds-ring">
@@ -441,8 +444,6 @@ export default {
 @import url("https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css");
 section {
   background: #0d0d0d;
-  background: linear-gradient(to bottom, black 50%, transparent 100%),
-    linear-gradient(to top, black 50%, transparent 100%);
   background-size: cover;
 }
 .slider-wrapper {
