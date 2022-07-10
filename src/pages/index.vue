@@ -6,6 +6,7 @@
     <BookingSection />
     <GallerySection />
     <ShirtsSection />
+    <ContactSection />
     <FooterElement />
   </main>
 </template>
