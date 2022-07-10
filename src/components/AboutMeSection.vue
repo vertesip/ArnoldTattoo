@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section id="about-me">
     <img class="mx-auto" src="at.png" alt="Arnold Tattoo">
     <p class="text-white max-w-7xl mx-auto text-center p-4">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
@@ -25,6 +25,6 @@ export default {
 
 <style scoped>
 section {
-    background: #0D0D0D;
+  background: #0d0d0d;
 }
 </style>

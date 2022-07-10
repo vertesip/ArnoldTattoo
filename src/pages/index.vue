@@ -18,6 +18,9 @@ export default {
 </script>
 
 <style scoped>
+html {
+  scroll-behavior: smooth;
+}
 body {
   min-height: 100vh;
   display: flex;

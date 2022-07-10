@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section id="contact">
     <p class="text-white max-w-7xl mx-auto text-center p-4">
       Kapcsolati adatok
     </p>
@@ -14,6 +14,6 @@ export default {
 
 <style scoped>
 section {
-    background: #0D0D0D;
+  background: #0d0d0d;
 }
 </style>

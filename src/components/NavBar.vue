@@ -1,5 +1,5 @@
 <template>
-  <nav class="nav transparent transparent-nav fixed z-10 w-full h-12 px-5">
+  <nav class="nav transparent transparent-nav fixed z-10 w-full h-12 px-5 z-50">
     <div class="flex items-center justify-between h-full max-w-7xl m-auto">
       <!-- Header logo -->
       <div>
@@ -12,11 +12,66 @@
 
       <!-- Mobile toggle -->
       <div class="md:hidden">
-        <button class="text-gray-500 w-10 h-10 relative focus:outline-none" @click="drawer">
-          <div class="block w-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
-            <span aria-hidden="true" class="block absolute h-0.5 w-5 bg-white transform transition duration-500 ease-in-out" :class="isOpen ? 'rotate-45' : '-translate-y-1.5'" />
-            <span aria-hidden="true" class="block absolute  h-0.5 w-5 bg-white transform transition duration-500 ease-in-out" :class="isOpen ? 'opacity-0' : ''" />
-            <span aria-hidden="true" class="block absolute  h-0.5 w-5 bg-white transform  transition duration-500 ease-in-out" :class="isOpen ? '-rotate-45' : 'translate-y-1.5'" />
+        <button
+          class="text-gray-500 w-10 h-10 relative focus:outline-none"
+          @click="drawer"
+        >
+          <div
+            class="
+              block
+              w-5
+              absolute
+              left-1/2
+              top-1/2
+              transform
+              -translate-x-1/2 -translate-y-1/2
+            "
+          >
+            <span
+              aria-hidden="true"
+              class="
+                block
+                absolute
+                h-0.5
+                w-5
+                bg-white
+                transform
+                transition
+                duration-500
+                ease-in-out
+              "
+              :class="isOpen ? 'rotate-45' : '-translate-y-1.5'"
+            />
+            <span
+              aria-hidden="true"
+              class="
+                block
+                absolute
+                h-0.5
+                w-5
+                bg-white
+                transform
+                transition
+                duration-500
+                ease-in-out
+              "
+              :class="isOpen ? 'opacity-0' : ''"
+            />
+            <span
+              aria-hidden="true"
+              class="
+                block
+                absolute
+                h-0.5
+                w-5
+                bg-white
+                transform
+                transition
+                duration-500
+                ease-in-out
+              "
+              :class="isOpen ? '-rotate-45' : 'translate-y-1.5'"
+            />
           </div>
         </button>
       </div>
@@ -25,12 +80,12 @@
       <div class="hidden md:block">
         <ul class="flex space-x-8 text-sm font-sans text-white">
           <li>
-            <a href="#" class="active border-b-2 pb-1">Rólam</a>
+            <a href="#about-me" class="active border-b-2 pb-1">Rólam</a>
           </li>
-          <li><a href="#" class="">Galéria</a></li>
-          <li><a href="#" class="">Időpontfoglalás</a></li>
-          <li><a href="#" class="">Pólók</a></li>
-          <li><a href="#" class="">Kapcsolat</a></li>
+          <li><a href="#gallery" class="">Galéria</a></li>
+          <li><a href="#booking" class="">Időpontfoglalás</a></li>
+          <li><a href="#shirts" class="">Pólók</a></li>
+          <li><a href="#contact" class="">Kapcsolat</a></li>
         </ul>
       </div>
 
@@ -96,35 +151,35 @@
         <ul class="divide-y font-sans text-white">
           <li>
             <a
-              href="#"
+              href="#about-me"
               class="my-4 inline-block"
               @click="isOpen = false"
             >Rólam</a>
           </li>
           <li>
             <a
-              href="#"
+              href="#gallery"
               class="my-4 inline-block"
               @click="isOpen = false"
             >Galéria</a>
           </li>
           <li>
             <a
-              href="#"
+              href="#booking"
               class="my-4 inline-block"
               @click="isOpen = false"
             >Időpontfoglalás</a>
           </li>
           <li>
             <a
-              href="#"
+              href="#shirts"
               class="my-4 inline-block"
               @click="isOpen = false"
             >Pólók</a>
           </li>
           <li>
             <a
-              href="#"
+              href="#contact"
               class="my-4 inline-block"
               @click="isOpen = false"
             >Kapcsolat</a>
@@ -249,6 +304,17 @@ export default {
       if (e.keyCode === 27 && this.isOpen) {
         this.isOpen = false
       }
+    })
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault()
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          block: 'center',
+          inline: 'center',
+          behavior: 'smooth'
+        })
+      })
     })
   },
   beforeDestroy () {

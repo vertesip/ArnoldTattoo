@@ -1,5 +1,5 @@
 <template>
-  <section />
+  <section id="booking" />
 </template>
 
 <script>
