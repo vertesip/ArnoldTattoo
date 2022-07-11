@@ -82,7 +82,7 @@
           <li>
             <a href="#about-me" class="active border-b-2 pb-1">Rólam</a>
           </li>
-          <li><a href="#gallery" class="">Galéria</a></li>
+          <li><a href="galleria" class="">Galéria</a></li>
           <li><a href="#booking" class="">Időpontfoglalás</a></li>
           <li><a href="#shirts" class="">Pólók</a></li>
           <li><a href="#contact" class="">Kapcsolat</a></li>
