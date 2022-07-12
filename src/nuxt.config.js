@@ -1,3 +1,5 @@
+const webpack = require('webpack')
+
 module.exports = {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -18,10 +20,13 @@ module.exports = {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    "~/node_modules/bootstrap/dist/css/bootstrap.min.css"
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    { src: "~/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js", mode: "client" }
+
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -29,14 +34,13 @@ module.exports = {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    '@nuxtjs/eslint-module',
     '@nuxtjs/tailwindcss'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: ['@nuxtjs/firebase',
-    '@nuxtjs/eslint-module',
-    '@nuxtjs/tailwindcss'],
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/axios'],
   firebase: {
     config: {
       apiKey: 'AIzaSyCAi1U-S3YNGcG-YitKZh_5FVV6GaaQOE4',
@@ -57,5 +61,12 @@ module.exports = {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    plugins: [
+      new webpack.ProvidePlugin({
+        jQuery: 'jQuery',
+        $: 'jQuery',
+        'window.jQuery': 'jQuery'
+      })
+    ]
   }
 }

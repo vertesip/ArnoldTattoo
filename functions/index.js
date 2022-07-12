@@ -8,6 +8,7 @@ const config = {
     dev: false,
     debug: false,
     buildDir: 'nuxt',
+    useEslint: false
 };
 const nuxt = new Nuxt(config);
 
