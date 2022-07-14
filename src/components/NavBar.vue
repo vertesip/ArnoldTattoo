@@ -372,6 +372,7 @@ export default {
 }
 
 .nav {
+  display: initial;
   transition: 0.2s;
   height: 50px;
 }
