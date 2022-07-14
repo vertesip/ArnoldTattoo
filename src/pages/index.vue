@@ -6,15 +6,15 @@
     <BookingSection />
     <GallerySection />
     <ShirtsSection />
-    <ContactSection />
-    <FooterElement />
+    <!--  <ContactSection />-->
+    <!-- <FooterElement /> -->
   </main>
 </template>
 
 <script>
 export default {
-  name: 'IndexPage'
-}
+  name: "IndexPage",
+};
 </script>
 
 <style scoped>
