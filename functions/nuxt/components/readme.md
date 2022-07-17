@@ -9,6 +9,7 @@ You can directly use them in pages and other components without the need to impo
 - `<AboutMeSection>` | `<about-me-section>` (components/AboutMeSection.vue)
 - `<BannerSection>` | `<banner-section>` (components/BannerSection.vue)
 - `<BookingSection>` | `<booking-section>` (components/BookingSection.vue)
+- `<ContactSection>` | `<contact-section>` (components/ContactSection.vue)
 - `<FooterElement>` | `<footer-element>` (components/FooterElement.vue)
 - `<GallerySection>` | `<gallery-section>` (components/GallerySection.vue)
 - `<NavBar>` | `<nav-bar>` (components/NavBar.vue)

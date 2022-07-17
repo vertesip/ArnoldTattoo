@@ -1,6 +1,7 @@
 export const AboutMeSection = () => import('../../components/AboutMeSection.vue' /* webpackChunkName: "components/about-me-section" */).then(c => wrapFunctional(c.default || c))
 export const BannerSection = () => import('../../components/BannerSection.vue' /* webpackChunkName: "components/banner-section" */).then(c => wrapFunctional(c.default || c))
 export const BookingSection = () => import('../../components/BookingSection.vue' /* webpackChunkName: "components/booking-section" */).then(c => wrapFunctional(c.default || c))
+export const ContactSection = () => import('../../components/ContactSection.vue' /* webpackChunkName: "components/contact-section" */).then(c => wrapFunctional(c.default || c))
 export const FooterElement = () => import('../../components/FooterElement.vue' /* webpackChunkName: "components/footer-element" */).then(c => wrapFunctional(c.default || c))
 export const GallerySection = () => import('../../components/GallerySection.vue' /* webpackChunkName: "components/gallery-section" */).then(c => wrapFunctional(c.default || c))
 export const NavBar = () => import('../../components/NavBar.vue' /* webpackChunkName: "components/nav-bar" */).then(c => wrapFunctional(c.default || c))

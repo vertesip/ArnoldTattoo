@@ -1,16 +1,23 @@
 [
   {
-    "name": "privacy-policy",
-    "path": "/privacy-policy",
-    "component": "/home/patrik/dev/ArnoldTattoo/src/pages/privacy-policy/index.vue",
-    "chunkName": "pages/privacy-policy/index",
-    "_name": "_8e83cc42"
+    "name": "adatvedelem",
+    "path": "/adatvedelem",
+    "component": "/home/patrik/dev/ArnoldNew/ArnoldTattoo/src/pages/adatvedelem/index.vue",
+    "chunkName": "pages/adatvedelem/index",
+    "_name": "_75a5a356"
+  },
+  {
+    "name": "galleria",
+    "path": "/galleria",
+    "component": "/home/patrik/dev/ArnoldNew/ArnoldTattoo/src/pages/galleria/index.vue",
+    "chunkName": "pages/galleria/index",
+    "_name": "_952fb664"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "/home/patrik/dev/ArnoldTattoo/src/pages/index.vue",
+    "component": "/home/patrik/dev/ArnoldNew/ArnoldTattoo/src/pages/index.vue",
     "chunkName": "pages/index",
-    "_name": "_44ea759d"
+    "_name": "_4fc93654"
   }
 ]

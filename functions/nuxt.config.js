@@ -1,3 +1,5 @@
+const webpack = require('webpack')
+
 module.exports = {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -29,14 +31,13 @@ module.exports = {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    '@nuxtjs/eslint-module',
     '@nuxtjs/tailwindcss'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: ['@nuxtjs/firebase',
-    '@nuxtjs/eslint-module',
-    '@nuxtjs/tailwindcss'],
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/axios'],
   firebase: {
     config: {
       apiKey: 'AIzaSyCAi1U-S3YNGcG-YitKZh_5FVV6GaaQOE4',
@@ -57,5 +58,12 @@ module.exports = {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  /*   plugins: [
+      new webpack.ProvidePlugin({
+        jQuery: 'jQuery',
+        $: 'jQuery',
+        'window.jQuery': 'jQuery'
+      })
+    ] */
   }
 }

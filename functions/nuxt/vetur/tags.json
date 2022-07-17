@@ -8,6 +8,9 @@
   "BookingSection": {
     "description": "Auto imported from components/BookingSection.vue"
   },
+  "ContactSection": {
+    "description": "Auto imported from components/ContactSection.vue"
+  },
   "FooterElement": {
     "description": "Auto imported from components/FooterElement.vue"
   },
