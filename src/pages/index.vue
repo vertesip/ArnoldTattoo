@@ -3,11 +3,11 @@
     <NavBar />
     <BannerSection />
     <AboutMeSection />
-    <BookingSection />
     <GallerySection />
     <ShirtsSection />
+        <BookingSection />
     <!--  <ContactSection />-->
-    <!-- <FooterElement /> -->
+    <FooterElement />
   </main>
 </template>
 
