@@ -1,5 +1,3 @@
-const webpack = require('webpack')
-
 module.exports = {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -24,6 +22,7 @@ module.exports = {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    { src: '~/plugins/calendly.js', ssr:  false  }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -58,12 +57,5 @@ module.exports = {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-  /*   plugins: [
-      new webpack.ProvidePlugin({
-        jQuery: 'jQuery',
-        $: 'jQuery',
-        'window.jQuery': 'jQuery'
-      })
-    ] */
   }
 }

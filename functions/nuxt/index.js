@@ -15,6 +15,7 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 import nuxt_plugin_plugin_0012a5f2 from 'nuxt_plugin_plugin_0012a5f2' // Source: ./components/plugin.js (mode: 'all')
 import nuxt_plugin_axios_75cea7f0 from 'nuxt_plugin_axios_75cea7f0' // Source: ./axios.js (mode: 'all')
 import nuxt_plugin_index_19fcd6f4 from 'nuxt_plugin_index_19fcd6f4' // Source: ./firebase/index.js (mode: 'all')
+import nuxt_plugin_calendly_4c5b0432 from 'nuxt_plugin_calendly_4c5b0432' // Source: ../plugins/calendly.js (mode: 'client')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -188,6 +189,10 @@ async function createApp(ssrContext, config = {}) {
 
   if (typeof nuxt_plugin_index_19fcd6f4 === 'function') {
     await nuxt_plugin_index_19fcd6f4(app.context, inject)
+  }
+
+  if (process.client && typeof nuxt_plugin_calendly_4c5b0432 === 'function') {
+    await nuxt_plugin_calendly_4c5b0432(app.context, inject)
   }
 
   // Lock enablePreview in context

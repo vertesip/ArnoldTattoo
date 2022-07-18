@@ -17,7 +17,7 @@
 export default {
   name: "BookingSection",
   mounted() {
-/*     document.querySelector("iframe").style.opacity = "1";
+    /*     document.querySelector("iframe").style.opacity = "1";
     document.querySelector(".lds-ring").style.opacity = "0"; */
   },
 };
@@ -70,7 +70,13 @@ section {
     transform: rotate(360deg);
   }
 }
-iframe {
-  opacity: 0;
+
+section {
+  background: #0d0d0d;
 }
+
+/* iframe {
+  opacity: 0;
+  position: relative;
+} */
 </style>
