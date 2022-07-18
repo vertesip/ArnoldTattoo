@@ -5,7 +5,8 @@
     <AboutMeSection />
     <GallerySection />
     <ShirtsSection />
-        <BookingSection />
+    <BookingSection />
+    <GoogleMap />
     <!--  <ContactSection />-->
     <FooterElement />
   </main>

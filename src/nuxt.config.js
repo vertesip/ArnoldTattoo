@@ -22,7 +22,9 @@ module.exports = {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    { src: '~/plugins/calendly.js', ssr:  false  }
+    { src: '~/plugins/calendly.js', ssr: false },
+    { src: '~plugins/geolocation.js' },
+    { src: '~plugins/googlemaps.js' }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -57,5 +59,11 @@ module.exports = {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    transpile: [/^vue2-google-maps($|\/)/],
+    loaders: {
+      vue: {
+        prettify: false
+      }
+    }
   }
 }
