@@ -21,7 +21,6 @@
     "firebase-admin": "^10.0.2",
     "firebase-functions": "^3.22.0",
     "nuxt-start": "^2.3.4",
-    "vue-browser-geolocation": "^1.8.0",
     "vue-slick-carousel": "^1.0.6"
   },
   "devDependencies": {

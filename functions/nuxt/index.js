@@ -16,7 +16,6 @@ import nuxt_plugin_plugin_0012a5f2 from 'nuxt_plugin_plugin_0012a5f2' // Source:
 import nuxt_plugin_axios_75cea7f0 from 'nuxt_plugin_axios_75cea7f0' // Source: ./axios.js (mode: 'all')
 import nuxt_plugin_index_19fcd6f4 from 'nuxt_plugin_index_19fcd6f4' // Source: ./firebase/index.js (mode: 'all')
 import nuxt_plugin_calendly_4c5b0432 from 'nuxt_plugin_calendly_4c5b0432' // Source: ../plugins/calendly.js (mode: 'client')
-import nuxt_plugin_geolocation_652509c8 from 'nuxt_plugin_geolocation_652509c8' // Source: ../plugins/geolocation.js (mode: 'all')
 import nuxt_plugin_googlemaps_53528530 from 'nuxt_plugin_googlemaps_53528530' // Source: ../plugins/googlemaps.js (mode: 'all')
 
 // Component: <ClientOnly>
@@ -67,7 +66,7 @@ async function createApp(ssrContext, config = {}) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"title":"ArnoldTattoo","htmlAttrs":{"lang":"en"},"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":""},{"name":"format-detection","content":"telephone=no"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"}],"style":[],"script":[]},
+    head: {"title":"Arnold Tattoo","htmlAttrs":{"lang":"hu"},"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":""},{"name":"format-detection","content":"telephone=no"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"}],"style":[],"script":[]},
 
     router,
     nuxt: {
@@ -195,10 +194,6 @@ async function createApp(ssrContext, config = {}) {
 
   if (process.client && typeof nuxt_plugin_calendly_4c5b0432 === 'function') {
     await nuxt_plugin_calendly_4c5b0432(app.context, inject)
-  }
-
-  if (typeof nuxt_plugin_geolocation_652509c8 === 'function') {
-    await nuxt_plugin_geolocation_652509c8(app.context, inject)
   }
 
   if (typeof nuxt_plugin_googlemaps_53528530 === 'function') {

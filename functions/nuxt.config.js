@@ -1,9 +1,9 @@
 module.exports = {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'ArnoldTattoo',
+    title: 'Arnold Tattoo',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'hu'
     },
     meta: [
       { charset: 'utf-8' },
@@ -23,7 +23,6 @@ module.exports = {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     { src: '~/plugins/calendly.js', ssr: false },
-    { src: '~plugins/geolocation.js' },
     { src: '~plugins/googlemaps.js' }
   ],
 
