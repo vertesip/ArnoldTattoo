@@ -17,6 +17,9 @@
   "GallerySection": {
     "description": "Auto imported from components/GallerySection.vue"
   },
+  "GoogleMap": {
+    "description": "Auto imported from components/GoogleMap.vue"
+  },
   "NavBar": {
     "description": "Auto imported from components/NavBar.vue"
   },

@@ -12,5 +12,6 @@ You can directly use them in pages and other components without the need to impo
 - `<ContactSection>` | `<contact-section>` (components/ContactSection.vue)
 - `<FooterElement>` | `<footer-element>` (components/FooterElement.vue)
 - `<GallerySection>` | `<gallery-section>` (components/GallerySection.vue)
+- `<GoogleMap>` | `<google-map>` (components/GoogleMap.vue)
 - `<NavBar>` | `<nav-bar>` (components/NavBar.vue)
 - `<ShirtsSection>` | `<shirts-section>` (components/ShirtsSection.vue)

@@ -7,7 +7,7 @@
           src="logo.png"
           class="logo transparent-logo max-h-10"
           alt="Arnold Tattoo Logo"
-        >
+        />
       </div>
 
       <!-- Mobile toggle -->
@@ -76,16 +76,28 @@
         </button>
       </div>
 
-      <!-- Navbar -->
+      <!-- Navbar 
+      active border-b-2 pb-1
+      -->
       <div class="hidden md:block">
         <ul class="flex space-x-8 text-sm font-sans text-white">
           <li>
-            <a href="#about-me" class="active border-b-2 pb-1">Rólam</a>
+            <nuxt-link :to="{ path: '/', hash: '#about-me' }">Rólam</nuxt-link>
           </li>
-          <li><a href="galleria" class="">Galéria</a></li>
-          <li><a href="#booking" class="">Időpontfoglalás</a></li>
-          <li><a href="#shirts" class="">Pólók</a></li>
-          <li><a href="#contact" class="">Kapcsolat</a></li>
+          <li><nuxt-link :to="{ path: '/galleria' }">Galéria</nuxt-link></li>
+          <li>
+            <nuxt-link :to="{ path: '/', hash: '#booking' }"
+              >Időpontfoglalás</nuxt-link
+            >
+          </li>
+          <li>
+            <nuxt-link :to="{ path: '/', hash: '#shirts' }">Pólók</nuxt-link>
+          </li>
+          <li>
+            <nuxt-link :to="{ path: '/', hash: '#contact' }"
+              >Kapcsolat</nuxt-link
+            >
+          </li>
         </ul>
       </div>
 
@@ -154,42 +166,33 @@
               href="#about-me"
               class="my-4 inline-block"
               @click="isOpen = false"
-            >Rólam</a>
+              >Rólam</a
+            >
           </li>
           <li>
-            <a
-              href="#gallery"
-              class="my-4 inline-block"
-              @click="isOpen = false"
-            >Galéria</a>
+            <a href="#gallery" class="my-4 inline-block" @click="isOpen = false"
+              >Galéria</a
+            >
           </li>
           <li>
-            <a
-              href="#booking"
-              class="my-4 inline-block"
-              @click="isOpen = false"
-            >Időpontfoglalás</a>
+            <a href="#booking" class="my-4 inline-block" @click="isOpen = false"
+              >Időpontfoglalás</a
+            >
           </li>
           <li>
-            <a
-              href="#shirts"
-              class="my-4 inline-block"
-              @click="isOpen = false"
-            >Pólók</a>
+            <a href="#shirts" class="my-4 inline-block" @click="isOpen = false"
+              >Pólók</a
+            >
           </li>
           <li>
-            <a
-              href="#contact"
-              class="my-4 inline-block"
-              @click="isOpen = false"
-            >Kapcsolat</a>
+            <a href="#contact" class="my-4 inline-block" @click="isOpen = false"
+              >Kapcsolat</a
+            >
           </li>
         </ul>
 
         <div class="follow">
-          <p class="italic font-sans text-sm">
-            follow us:
-          </p>
+          <p class="italic font-sans text-sm">follow us:</p>
           <div class="social flex space-x-5 mt-4">
             <a href="#">
               <svg
@@ -268,77 +271,77 @@
 
 <script>
 export default {
-  name: 'NavBar',
-  data () {
+  name: "NavBar",
+  data() {
     return {
-      isOpen: false
-    }
+      isOpen: false,
+    };
   },
   watch: {
     isOpen: {
       immediate: true,
-      handler (isOpen) {
+      handler(isOpen) {
         if (process.client) {
           if (isOpen) {
-            document.body.style.setProperty('overflow', 'hidden')
+            document.body.style.setProperty("overflow", "hidden");
           } else {
-            document.body.style.removeProperty('overflow')
+            document.body.style.removeProperty("overflow");
           }
         }
-      }
-    }
+      },
+    },
   },
-  mounted () {
-    window.addEventListener('scroll', this.onScroll)
+  mounted() {
+    window.addEventListener("scroll", this.onScroll);
 
-    const nav = document.querySelector('.nav')
-    const logo = document.querySelector('.logo')
+    const nav = document.querySelector(".nav");
+    const logo = document.querySelector(".logo");
 
-    this.windowTop = window.top.scrollY
+    this.windowTop = window.top.scrollY;
     if (window.top.scrollY !== 0) {
-      nav.classList.remove('transparent-nav')
-      logo.classList.remove('transparent-logo')
+      nav.classList.remove("transparent-nav");
+      logo.classList.remove("transparent-logo");
     }
 
-    document.addEventListener('keydown', (e) => {
+    document.addEventListener("keydown", (e) => {
       if (e.keyCode === 27 && this.isOpen) {
-        this.isOpen = false
+        this.isOpen = false;
       }
-    })
+    });
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault()
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
 
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          block: 'center',
-          inline: 'center',
-          behavior: 'smooth'
-        })
-      })
-    })
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+          block: "center",
+          inline: "center",
+          behavior: "smooth",
+        });
+      });
+    });
   },
-  beforeDestroy () {
-    window.removeEventListener('scroll', this.onScroll)
+  beforeDestroy() {
+    window.removeEventListener("scroll", this.onScroll);
   },
   methods: {
-    onScroll (e) {
-      const nav = document.querySelector('.nav')
-      const logo = document.querySelector('.logo')
+    onScroll(e) {
+      const nav = document.querySelector(".nav");
+      const logo = document.querySelector(".logo");
 
-      this.windowTop = window.top.scrollY
+      this.windowTop = window.top.scrollY;
       if (window.top.scrollY === 0) {
-        nav.classList.add('transparent-nav')
-        logo.classList.add('transparent-logo')
+        nav.classList.add("transparent-nav");
+        logo.classList.add("transparent-logo");
       } else {
-        nav.classList.remove('transparent-nav')
-        logo.classList.remove('transparent-logo')
+        nav.classList.remove("transparent-nav");
+        logo.classList.remove("transparent-logo");
       }
     },
-    drawer () {
-      this.isOpen = !this.isOpen
-    }
-  }
-}
+    drawer() {
+      this.isOpen = !this.isOpen;
+    },
+  },
+};
 </script>
 <style>
 ::-webkit-scrollbar {
