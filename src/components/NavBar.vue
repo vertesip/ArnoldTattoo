@@ -3,11 +3,13 @@
     <div class="flex items-center justify-between h-full max-w-7xl m-auto">
       <!-- Header logo -->
       <div>
-        <img
-          src="logo.png"
-          class="logo transparent-logo max-h-10"
-          alt="Arnold Tattoo Logo"
-        />
+        <nuxt-link :to="{ path: '/' }">
+          <img
+            src="logo.png"
+            class="logo transparent-logo max-h-10"
+            alt="Arnold Tattoo Logo"
+          />
+        </nuxt-link>
       </div>
 
       <!-- Mobile toggle -->
@@ -308,17 +310,6 @@ export default {
         this.isOpen = false;
       }
     });
-    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-      anchor.addEventListener("click", function (e) {
-        e.preventDefault();
-
-        document.querySelector(this.getAttribute("href")).scrollIntoView({
-          block: "center",
-          inline: "center",
-          behavior: "smooth",
-        });
-      });
-    });
   },
   beforeDestroy() {
     window.removeEventListener("scroll", this.onScroll);
@@ -344,6 +335,9 @@ export default {
 };
 </script>
 <style>
+html {
+  scroll-behavior: smooth;
+}
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -394,11 +388,13 @@ export default {
   opacity: 0;
 }
 
-li .active {
-  border-bottom-color: #aa923b;
-}
-
 ul li a {
   text-shadow: 1px 1px black;
+}
+
+.nuxt-link-active {
+  border-bottom-width: 2px;
+  padding-bottom: 0.25rem;
+  border-bottom-color: #aa923b;
 }
 </style>
