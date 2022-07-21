@@ -1,6 +1,7 @@
 <template>
   <main>
     <NavBar />
+    <img class="mx-auto mt-20" src="gallery.png" alt="Gallery header" />
     <nuxt-link :to="{ path: '/' }" style="border-bottom: none">
       <p class="flex justify-center mt-28 mb-14 text-white text-2xl">
         Vissza a főoldalra

@@ -4,7 +4,6 @@
     class="relative"
     style="background-image: linear-gradient( to bottom, rgba(13,13,13,1), rgba(13,13,13,0), rgba(13,13,13,1) ),linear-gradient( to top, rgba(13,13,13,1), rgba(13,13,13,0.8), rgba(13,13,13,1) ),url(background.jpg);"
   >
-    <img class="mx-auto my-20" src="gallery.png" alt="Gallery header">
 
     <div class="lds-ring">
       <div />
@@ -13,8 +12,8 @@
       <div />
     </div>
 
-    <div class="slider-wrapper">
-      <div class="container mx-auto relative">
+    <div class="slider-wrapper max-w-7xl mx-auto">
+      <div class="container mx-auto relative ">
         <div
           class="
             flex

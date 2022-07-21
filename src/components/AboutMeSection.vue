@@ -1,26 +1,22 @@
 <template>
   <section id="about-me">
-    <img class="mx-auto" src="at.png" alt="Arnold Tattoo">
-    <p class="text-white max-w-7xl mx-auto text-center p-4">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
-      similique atque ut dolore inventore. Temporibus eos adipisci eius,
-      eligendi voluptatum earum totam quos itaque voluptate voluptates et
-      tempora porro illo, ab quod quasi vero optio ratione reiciendis nemo
-      obcaecati qui! Animi labore sapiente, nam nesciunt vero nostrum illo,
-      natus similique dolore reiciendis numquam vel? Obcaecati, vitae cum rem
-      tenetur delectus id. Molestiae laboriosam nobis tempore. Quos, commodi
-      illo molestiae optio illum odio. Fugit aliquam magnam incidunt soluta
-      officiis optio molestiae quia error eaque! Quo aliquam ea laboriosam iste,
-      neque modi, quia inventore ut tempora recusandae quis dignissimos quod
-      obcaecati? Cumque?
+    <img class="mx-auto" src="at.png" alt="Arnold Tattoo" />
+    <p class="text-white max-w-7xl mx-auto text-justify p-4">
+      Sziasztok! Kolozsvári Arnold a nevem, körülbelül 2007 környékén kezdtem
+      foglalkozni tetoválások készítésével 😅 persze már előtte is érdekelt a
+      téma. Jelenleg Komáromban dolgozom, Arnold Tattoo nevű szalonomban.
+      Korábban Győrben dolgoztam, de Svájcban is tetováltam. Jelenleg
+      Németországban is fellelheto vagyok. Többnyire a fekete fehér melókat
+      kedvelem ,de szívesen színezek be embereket 😂 itt van pár melóm
+      csekkoljátok és ha felkeltettem érdeklődésedet bátran keress fel. 🤘
     </p>
   </section>
 </template>
 
 <script>
 export default {
-  name: 'AboutMeSection'
-}
+  name: "AboutMeSection",
+};
 </script>
 
 <style scoped>
