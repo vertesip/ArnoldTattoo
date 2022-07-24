@@ -2,12 +2,16 @@
   <main>
     <NavBar />
     <div class="h-28" />
-    <nuxt-link :to="{ path: '/' }" style="border-bottom: none" class="h-14 flex justify-center">
+    <nuxt-link
+      :to="{ path: '/' }"
+      style="border-bottom: none"
+      class="h-14 flex justify-center"
+    >
       <p class="flex justify-center text-white text-2xl">Vissza a főoldalra</p>
     </nuxt-link>
     <section>
-      <div class="flex flex-wrap justify-center">
-        <div class="max-w-7xl mx-auto">
+      <div class="flex flex-wrap justify-center break-all">
+        <div class="max-w-7xl mx-auto gap-1 flex flex-col">
           <h2 class="has-text-align-center">
             <strong>ADATKEZELÉSI TÁJÉKOZTATÓ &#8211; MINTA</strong>
           </h2>
@@ -950,7 +954,14 @@ export default {
 section {
   color: white;
 }
+section > div{
+  margin: 0 2vw
+}
 main {
   background: #0d0d0d;
+}
+.mx-\[max\(20vw\2c 12px\)\] {
+  margin-left: max(20vw, 12px);
+  margin-right: max(20vw, 12px);
 }
 </style>

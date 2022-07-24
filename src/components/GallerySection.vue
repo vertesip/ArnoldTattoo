@@ -2,9 +2,22 @@
   <section
     id="gallery"
     class="relative"
-    style="background-image: linear-gradient( to bottom, rgba(13,13,13,1), rgba(13,13,13,0), rgba(13,13,13,1) ),linear-gradient( to top, rgba(13,13,13,1), rgba(13,13,13,0.8), rgba(13,13,13,1) ),url(background.jpg);"
+    style="
+      background-image: linear-gradient(
+          to bottom,
+          rgba(13, 13, 13, 1),
+          rgba(13, 13, 13, 0),
+          rgba(13, 13, 13, 1)
+        ),
+        linear-gradient(
+          to top,
+          rgba(13, 13, 13, 1),
+          rgba(13, 13, 13, 0.8),
+          rgba(13, 13, 13, 1)
+        ),
+        url(background.jpg);
+    "
   >
-
     <div class="lds-ring">
       <div />
       <div />
@@ -13,7 +26,7 @@
     </div>
 
     <div class="slider-wrapper max-w-7xl mx-auto">
-      <div class="container mx-auto relative ">
+      <div class="container mx-auto relative">
         <div
           class="
             flex
@@ -109,7 +122,7 @@
                       src="photo.png"
                       alt="black chair and white table"
                       class="object-cover object-center w-full z-10"
-                    >
+                    />
                     <img
                       src="https://images.unsplash.com/photo-1568515045052-f9a854d70bfd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
                       alt="black chair and white table"
@@ -120,7 +133,7 @@
                         z-0
                         absolute
                       "
-                    >
+                    />
                     <div
                       class="
                         bg-gray-800 bg-opacity-30
@@ -164,7 +177,7 @@
                       src="photo.png"
                       alt="black chair and white table"
                       class="object-cover object-center w-full z-10"
-                    >
+                    />
                     <img
                       src="https://images.unsplash.com/photo-1605647533135-51b5906087d0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
                       alt="black chair and white table"
@@ -175,7 +188,7 @@
                         z-0
                         absolute
                       "
-                    >
+                    />
                     <div
                       class="
                         bg-gray-800 bg-opacity-30
@@ -219,7 +232,7 @@
                       src="photo.png"
                       alt="black chair and white table"
                       class="object-cover object-center w-full z-10"
-                    >
+                    />
                     <img
                       src="https://images.unsplash.com/photo-1579035478707-49db569751d6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=733&q=80"
                       alt="black chair and white table"
@@ -230,7 +243,7 @@
                         z-0
                         absolute
                       "
-                    >
+                    />
                     <div
                       class="
                         bg-gray-800 bg-opacity-30
@@ -274,7 +287,7 @@
                       src="photo.png"
                       alt="black chair and white table"
                       class="object-cover object-center w-full z-10"
-                    >
+                    />
                     <img
                       src="https://images.unsplash.com/photo-1541121514895-0f36e7d38d14?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
                       alt="black chair and white table"
@@ -285,7 +298,7 @@
                         z-0
                         absolute
                       "
-                    >
+                    />
                     <div
                       class="
                         bg-gray-800 bg-opacity-30
@@ -329,7 +342,7 @@
                       src="photo.png"
                       alt="black chair and white table"
                       class="object-cover object-center w-full z-10"
-                    >
+                    />
                     <img
                       src="https://images.unsplash.com/photo-1597852075234-fd721ac361d3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
                       alt="black chair and white table"
@@ -340,7 +353,7 @@
                         z-0
                         absolute
                       "
-                    >
+                    />
                     <div
                       class="
                         bg-gray-800 bg-opacity-30
@@ -388,12 +401,12 @@
 </template>
 
 <script>
-import VueSlickCarousel from 'vue-slick-carousel'
-import 'vue-slick-carousel/dist/vue-slick-carousel.css'
+import VueSlickCarousel from "vue-slick-carousel";
+import "vue-slick-carousel/dist/vue-slick-carousel.css";
 export default {
-  name: 'GallerySection',
+  name: "GallerySection",
   components: { VueSlickCarousel },
-  data () {
+  data() {
     return {
       settings: {
         dots: false,
@@ -405,38 +418,38 @@ export default {
         slidesToScroll: 1,
         touchThreshold: 5,
         responsive: [
-          { breakpoint: 768, settings: { arrows: false, slidesToShow: 2 } },
-          { breakpoint: 576, settings: { arrows: false, slidesToShow: 1 } }
-        ]
-      }
+          { breakpoint: 1000, settings: { arrows: false, slidesToShow: 2 } },
+          { breakpoint: 770, settings: { arrows: false, slidesToShow: 1 } },
+        ],
+      },
       // windowWidth: window.innerWidth
-    }
+    };
   },
-  mounted () {
-    document.querySelector('.slider-wrapper').style.opacity = '1'
-    document.querySelector('.lds-ring').style.opacity = '0'
+  mounted() {
+    document.querySelector(".slider-wrapper").style.opacity = "1";
+    document.querySelector(".lds-ring").style.opacity = "0";
 
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       if (window.innerWidth > 1339) {
-        this.settings.slidesToShow = 3
+        this.settings.slidesToShow = 3;
       } else if (window.innerWidth > 1079) {
-        this.settings.slidesToShow = 2
+        this.settings.slidesToShow = 2;
       } else if (window.innerWidth > 767) {
-        this.settings.slidesToShow = 1
+        this.settings.slidesToShow = 1;
       } else {
-        this.settings.slidesToShow = 1
+        this.settings.slidesToShow = 1;
       }
     }
   },
   methods: {
-    showNext () {
-      this.$refs.carousel.next()
+    showNext() {
+      this.$refs.carousel.next();
     },
-    showPrev () {
-      this.$refs.carousel.prev()
-    }
-  }
-}
+    showPrev() {
+      this.$refs.carousel.prev();
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -479,9 +492,21 @@ section {
 .instagram-pic {
   height: -webkit-fill-available;
 }
-@media (min-width: 300px) and (max-width: 884px) {
+@media (min-width: 0px) and (max-width: 339px) {
   .slider {
-    height: 550px;
+    height: 490px;
+  }
+}
+
+@media (min-width: 340px) and (max-width: 580px) {
+  .slider {
+    height: 600px;
+  }
+}
+
+@media (min-width: 581px) and (max-width: 770px) {
+  .slider {
+    height: 800px;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {

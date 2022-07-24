@@ -4,8 +4,8 @@
     <BannerSection />
     <AboutMeSection />
     <GallerySection />
-    <ShirtsSection />
     <BookingSection />
+    <ShirtsSection />
     <GoogleMap />
     <!--  <ContactSection />-->
     <FooterElement />
