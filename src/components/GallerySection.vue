@@ -115,9 +115,14 @@
         >
           <div class="slider">
             <div class="slide-ana">
-              
+              <!-- <div
+                v-for="(image, index) in images"
+                :key="index"
+              >
+                {{images[index]}}
+              </div> -->
               <VueSlickCarousel
-                v-if="!this.images.length"
+                v-if="this.images.length > 3"
                 v-bind="settings"
                 ref="carousel"
               >
@@ -126,7 +131,6 @@
                   v-for="(image, index) in images"
                   :key="index"
                 >
-                {{image}}
                   <div class="flex flex-shrink-0 relative w-full sm:w-auto">
                     <img
                       src="photo.png"
@@ -140,6 +144,7 @@
                         z-0
                         absolute
                       "
+                      :src=image
                     />
                     <div
                       class="
@@ -173,7 +178,7 @@ import "vue-slick-carousel/dist/vue-slick-carousel.css";
 import firebase from "firebase/compat/app";
 import "firebase/storage";
 import { getApp } from "firebase/app";
-import { getStorage, ref, listAll } from "firebase/storage";
+import { getStorage, ref, listAll, getDownloadURL } from "firebase/storage";
 
 export default {
   name: "GallerySection",
@@ -256,15 +261,19 @@ export default {
           // You may call listAll() recursively on them.
           // console.log(folderRef);
         });
-        if(Array.isArray(res.items)) {
-          this.images = res.items;
-        }
-        
-        /* res.items.forEach((itemRef) => {
+
+        res.items.forEach((itemRef) => {
           // All the items under listRef.
-          //console.log(itemRef);
-          this.images.push(itemRef);
-        }); */
+
+          getDownloadURL(ref(storage, itemRef._location.path))
+            .then((url) => {
+              this.images.push(url);
+            })
+            .catch((error) => {
+              // Handle any errors
+            });
+          
+        });
       })
       .catch((error) => {
         // Uh-oh, an error occurred!
