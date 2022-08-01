@@ -115,19 +115,24 @@
         >
           <div class="slider">
             <div class="slide-ana">
-              <VueSlickCarousel v-bind="settings" ref="carousel">
+              
+              <VueSlickCarousel
+                v-if="!this.images.length"
+                v-bind="settings"
+                ref="carousel"
+              >
                 <div
                   class="px-3"
-                  v-for="(image, index) in courselImages"
+                  v-for="(image, index) in images"
                   :key="index"
                 >
+                {{image}}
                   <div class="flex flex-shrink-0 relative w-full sm:w-auto">
                     <img
                       src="photo.png"
                       class="object-cover object-center w-full z-10"
                     />
                     <img
-                      :src="getImgUrl(image.src)"
                       class="
                         instagram-pic
                         object-cover object-center
@@ -161,9 +166,15 @@
 /* import firebase from 'firebase/app';
 import 'firebase/storage';
  */
-import { storage } from "~/plugins/firebase.js";
+import { listRef } from "~/plugins/firebase.js";
 import VueSlickCarousel from "vue-slick-carousel";
 import "vue-slick-carousel/dist/vue-slick-carousel.css";
+
+import firebase from "firebase/compat/app";
+import "firebase/storage";
+import { getApp } from "firebase/app";
+import { getStorage, ref, listAll } from "firebase/storage";
+
 export default {
   name: "GallerySection",
   components: { VueSlickCarousel },
@@ -184,6 +195,7 @@ export default {
         ],
       },
       image: null,
+      images: [],
       courselImages: [
         {
           id: "1",
@@ -230,25 +242,39 @@ export default {
       }
     }
 
-    /* 
-      firebase
-        .storage()
-        .ref("test/1234-1.jpg")
-        .getDownloadURL()
-        .then(url => {
-          const xhr = new XMLHttpRequest();
-          xhr.responseType = "blob";
-          xhr.onload = event => {
-            this.image = xhr.response;
-            event.preventDefault();
-          };
-          xhr.open("GET", url);
-          xhr.send();
-        })
-        .catch(error => {
-          // Handle any errors
-          console.log(error);
+    const firebaseApp = getApp();
+    const storage = getStorage(firebaseApp, "gs://arnoldtattoo.appspot.com");
+
+    // Create a reference under which you want to list
+    const listRef = ref(storage);
+    let array = [];
+    // Find all the prefixes and items.
+    listAll(listRef)
+      .then((res) => {
+        res.prefixes.forEach((folderRef) => {
+          // All the prefixes under listRef.
+          // You may call listAll() recursively on them.
+          // console.log(folderRef);
+        });
+        if(Array.isArray(res.items)) {
+          this.images = res.items;
+        }
+        
+        /* res.items.forEach((itemRef) => {
+          // All the items under listRef.
+          //console.log(itemRef);
+          this.images.push(itemRef);
         }); */
+      })
+      .catch((error) => {
+        // Uh-oh, an error occurred!
+        console.log(error);
+      });
+
+    //console.log(typeof this.images)
+  },
+  computed: {
+    // a computed getter
   },
   methods: {
     showNext() {

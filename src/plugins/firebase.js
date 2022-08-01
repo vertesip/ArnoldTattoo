@@ -1,7 +1,5 @@
 import firebase from 'firebase/compat/app'
 import 'firebase/storage';
-import { getApp } from "firebase/app";
-import { getStorage, ref, listAll  } from "firebase/storage";
 
 if (!firebase.apps.length) {
   firebase.initializeApp(
@@ -17,27 +15,3 @@ if (!firebase.apps.length) {
     }
   )
 }
-
-const firebaseApp = getApp();
-const storage = getStorage(firebaseApp, "gs://arnoldtattoo.appspot.com");
-
-// Create a reference under which you want to list
-const listRef = ref(storage);
-
-// Find all the prefixes and items.
-listAll(listRef)
-  .then((res) => {
-    res.prefixes.forEach((folderRef) => {
-      // All the prefixes under listRef.
-      // You may call listAll() recursively on them.
-      console.log(folderRef)
-    });
-    res.items.forEach((itemRef) => {
-      // All the items under listRef.
-      console.log(itemRef);
-    });
-  }).catch((error) => {
-    // Uh-oh, an error occurred!
-    console.log(error)
-  });
-
