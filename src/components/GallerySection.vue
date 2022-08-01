@@ -116,16 +116,18 @@
           <div class="slider">
             <div class="slide-ana">
               <VueSlickCarousel v-bind="settings" ref="carousel">
-                <div class="px-3">
+                <div
+                  class="px-3"
+                  v-for="(image, index) in courselImages"
+                  :key="index"
+                >
                   <div class="flex flex-shrink-0 relative w-full sm:w-auto">
                     <img
                       src="photo.png"
-                      alt="black chair and white table"
                       class="object-cover object-center w-full z-10"
                     />
                     <img
-                      src="https://images.unsplash.com/photo-1568515045052-f9a854d70bfd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
-                      alt="black chair and white table"
+                      :src="getImgUrl(image.src)"
                       class="
                         instagram-pic
                         object-cover object-center
@@ -142,253 +144,7 @@
                         h-full
                         p-6
                       "
-                    >
-                      <!--   <h2
-                      class="
-                        lg:text-xl
-                        leading-4
-                        text-base
-                        lg:leading-5
-                        text-white
-                      "
-                    >
-                      Catalog 1
-                    </h2>
-                    <div class="flex h-full items-end pb-6">
-                      <h3
-                        class="
-                          text-xl
-                          lg:text-2xl
-                          font-semibold
-                          leading-5
-                          lg:leading-6
-                          text-white
-                        "
-                      >
-                        Minimal Interior
-                      </h3>
-                    </div> -->
-                    </div>
-                  </div>
-                </div>
-                <div class="px-3">
-                  <div class="flex flex-shrink-0 relative w-full sm:w-auto">
-                    <img
-                      src="photo.png"
-                      alt="black chair and white table"
-                      class="object-cover object-center w-full z-10"
-                    />
-                    <img
-                      src="https://images.unsplash.com/photo-1605647533135-51b5906087d0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-                      alt="black chair and white table"
-                      class="
-                        instagram-pic
-                        object-cover object-center
-                        w-full
-                        z-0
-                        absolute
-                      "
-                    />
-                    <div
-                      class="
-                        bg-gray-800 bg-opacity-30
-                        absolute
-                        w-full
-                        h-full
-                        p-6
-                      "
-                    >
-                      <!--   <h2
-                      class="
-                        lg:text-xl
-                        leading-4
-                        text-base
-                        lg:leading-5
-                        text-white
-                      "
-                    >
-                      Catalog 1
-                    </h2>
-                    <div class="flex h-full items-end pb-6">
-                      <h3
-                        class="
-                          text-xl
-                          lg:text-2xl
-                          font-semibold
-                          leading-5
-                          lg:leading-6
-                          text-white
-                        "
-                      >
-                        Minimal Interior
-                      </h3>
-                    </div> -->
-                    </div>
-                  </div>
-                </div>
-                <div class="px-3">
-                  <div class="flex flex-shrink-0 relative w-full sm:w-auto">
-                    <img
-                      src="photo.png"
-                      alt="black chair and white table"
-                      class="object-cover object-center w-full z-10"
-                    />
-                    <img
-                      src="https://images.unsplash.com/photo-1579035478707-49db569751d6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=733&q=80"
-                      alt="black chair and white table"
-                      class="
-                        instagram-pic
-                        object-cover object-center
-                        w-full
-                        z-0
-                        absolute
-                      "
-                    />
-                    <div
-                      class="
-                        bg-gray-800 bg-opacity-30
-                        absolute
-                        w-full
-                        h-full
-                        p-6
-                      "
-                    >
-                      <!--   <h2
-                      class="
-                        lg:text-xl
-                        leading-4
-                        text-base
-                        lg:leading-5
-                        text-white
-                      "
-                    >
-                      Catalog 1
-                    </h2>
-                    <div class="flex h-full items-end pb-6">
-                      <h3
-                        class="
-                          text-xl
-                          lg:text-2xl
-                          font-semibold
-                          leading-5
-                          lg:leading-6
-                          text-white
-                        "
-                      >
-                        Minimal Interior
-                      </h3>
-                    </div> -->
-                    </div>
-                  </div>
-                </div>
-                <div class="px-3">
-                  <div class="flex flex-shrink-0 relative w-full sm:w-auto">
-                    <img
-                      src="photo.png"
-                      alt="black chair and white table"
-                      class="object-cover object-center w-full z-10"
-                    />
-                    <img
-                      src="https://images.unsplash.com/photo-1541121514895-0f36e7d38d14?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-                      alt="black chair and white table"
-                      class="
-                        instagram-pic
-                        object-cover object-center
-                        w-full
-                        z-0
-                        absolute
-                      "
-                    />
-                    <div
-                      class="
-                        bg-gray-800 bg-opacity-30
-                        absolute
-                        w-full
-                        h-full
-                        p-6
-                      "
-                    >
-                      <!--   <h2
-                      class="
-                        lg:text-xl
-                        leading-4
-                        text-base
-                        lg:leading-5
-                        text-white
-                      "
-                    >
-                      Catalog 1
-                    </h2>
-                    <div class="flex h-full items-end pb-6">
-                      <h3
-                        class="
-                          text-xl
-                          lg:text-2xl
-                          font-semibold
-                          leading-5
-                          lg:leading-6
-                          text-white
-                        "
-                      >
-                        Minimal Interior
-                      </h3>
-                    </div> -->
-                    </div>
-                  </div>
-                </div>
-                <div class="px-3">
-                  <div class="flex flex-shrink-0 relative w-full sm:w-auto">
-                    <img
-                      src="photo.png"
-                      alt="black chair and white table"
-                      class="object-cover object-center w-full z-10"
-                    />
-                    <img
-                      src="https://images.unsplash.com/photo-1597852075234-fd721ac361d3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
-                      alt="black chair and white table"
-                      class="
-                        instagram-pic
-                        object-cover object-center
-                        w-full
-                        z-0
-                        absolute
-                      "
-                    />
-                    <div
-                      class="
-                        bg-gray-800 bg-opacity-30
-                        absolute
-                        w-full
-                        h-full
-                        p-6
-                      "
-                    >
-                      <!--   <h2
-                      class="
-                        lg:text-xl
-                        leading-4
-                        text-base
-                        lg:leading-5
-                        text-white
-                      "
-                    >
-                      Catalog 1
-                    </h2>
-                    <div class="flex h-full items-end pb-6">
-                      <h3
-                        class="
-                          text-xl
-                          lg:text-2xl
-                          font-semibold
-                          leading-5
-                          lg:leading-6
-                          text-white
-                        "
-                      >
-                        Minimal Interior
-                      </h3>
-                    </div> -->
-                    </div>
+                    ></div>
                   </div>
                 </div>
               </VueSlickCarousel>
@@ -401,6 +157,11 @@
 </template>
 
 <script>
+// This import loads the firebase namespace.
+/* import firebase from 'firebase/app';
+import 'firebase/storage';
+ */
+import { storage } from "~/plugins/firebase.js";
 import VueSlickCarousel from "vue-slick-carousel";
 import "vue-slick-carousel/dist/vue-slick-carousel.css";
 export default {
@@ -422,6 +183,34 @@ export default {
           { breakpoint: 770, settings: { arrows: false, slidesToShow: 1 } },
         ],
       },
+      image: null,
+      courselImages: [
+        {
+          id: "1",
+          src: "gallery/274715628_471775764379338_4382020898604230668_n.webp",
+        },
+        {
+          id: "2",
+          src: "gallery/275935764_490839785806269_7383219440987325020_n.webp",
+        },
+        {
+          id: "3",
+          src: "gallery/277804829_501649164725331_7225738029099511224_n.webp",
+        },
+        {
+          id: "4",
+          src: "gallery/278508155_508128010744113_3433975312242100447_n.webp",
+        },
+        {
+          id: "5",
+          src: "gallery/279005256_511788750378039_5903530006355461080_n.webp",
+        },
+        {
+          id: "6",
+          src: "gallery/279019128_511788743711373_1425367768301718400_n.webp",
+        },
+      ],
+
       // windowWidth: window.innerWidth
     };
   },
@@ -440,6 +229,26 @@ export default {
         this.settings.slidesToShow = 1;
       }
     }
+
+    /* 
+      firebase
+        .storage()
+        .ref("test/1234-1.jpg")
+        .getDownloadURL()
+        .then(url => {
+          const xhr = new XMLHttpRequest();
+          xhr.responseType = "blob";
+          xhr.onload = event => {
+            this.image = xhr.response;
+            event.preventDefault();
+          };
+          xhr.open("GET", url);
+          xhr.send();
+        })
+        .catch(error => {
+          // Handle any errors
+          console.log(error);
+        }); */
   },
   methods: {
     showNext() {
@@ -447,6 +256,9 @@ export default {
     },
     showPrev() {
       this.$refs.carousel.prev();
+    },
+    getImgUrl: function (path) {
+      return require("@/static/" + path);
     },
   },
 };
