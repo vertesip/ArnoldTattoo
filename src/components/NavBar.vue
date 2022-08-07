@@ -5,7 +5,7 @@
       <div>
         <nuxt-link :to="{ path: '/' }">
           <img
-            src="logo.png"
+            src="logo.webp"
             class="logo transparent-logo max-h-10"
             alt="Arnold Tattoo Logo"
           />

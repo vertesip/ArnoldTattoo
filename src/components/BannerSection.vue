@@ -1,7 +1,7 @@
 <template>
   <section>
-    <img class="logo" src="logo.png" alt="Logo">
-    <img class="banner" src="bg_logo_nelkul.png" alt="Banner">
+    <img class="logo" src="logo.webp" alt="Logo">
+    <img class="banner" src="bg_logo_nelkul.webp" alt="Banner">
   </section>
 </template>
 

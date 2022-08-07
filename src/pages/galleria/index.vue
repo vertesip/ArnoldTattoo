@@ -1,7 +1,7 @@
 <template>
   <main>
     <NavBar />
-    <img class="mx-auto mt-20" src="gallery.png" alt="Gallery header" />
+    <img class="mx-auto mt-20" src="gallery.webp" alt="Gallery header" />
     <nuxt-link :to="{ path: '/' }" style="border-bottom: none">
       <p class="flex justify-center mt-28 mb-14 text-white text-2xl">
         Vissza a főoldalra
@@ -14,7 +14,7 @@
     >
       <div class="px-3 image-wrapper" v-for="(image, index) in images" :key="index">
         <div class="flex flex-shrink-0 relative w-full sm:w-auto">
-          <img src="photo.png" class="object-cover object-center w-full z-10" />
+          <img src="photo.webp" class="object-cover object-center w-full z-10" />
           <img
             class="instagram-pic object-cover object-center w-full z-0 absolute"
             :src="image"

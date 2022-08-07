@@ -113,7 +113,7 @@
                 >
                   <div class="flex flex-shrink-0 relative w-full sm:w-auto">
                     <img
-                      src="photo.png"
+                      src="photo.webp"
                       class="object-cover object-center w-full z-10"
                     />
                     <img
@@ -143,10 +143,16 @@
         </div>
       </div>
     </div>
+      <nuxt-link :to="{ path: '/galleria' }" style="border-bottom: none">
+      <p class="flex justify-center text-white text-2xl">
+        Kattints ide a többi képért
+      </p>
+    </nuxt-link>
   </section>
 </template>
 
 <script>
+
 import { listRef } from "~/plugins/firebase.js";
 import VueSlickCarousel from "vue-slick-carousel";
 import "vue-slick-carousel/dist/vue-slick-carousel.css";

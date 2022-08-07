@@ -8,7 +8,7 @@
     </div> -->
     <vue-calendly
       url="https://calendly.com/arnoldtattoo"
-      :height="700"
+      :height="800"
     ></vue-calendly>
   </section>
 </template>
