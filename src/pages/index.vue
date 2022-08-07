@@ -6,7 +6,7 @@
     <GallerySection />
     <BookingSection />
     <ShirtsSection />
-<!--     <GoogleMap /> -->
+    <GoogleMap />
     <!--  <ContactSection />-->
     <FooterElement />
   </main>

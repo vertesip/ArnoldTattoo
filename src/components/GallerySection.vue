@@ -101,12 +101,6 @@
         >
           <div class="slider">
             <div class="slide-ana">
-              <!-- <div
-                v-for="(image, index) in images"
-                :key="index"
-              >
-                {{images[index]}}
-              </div> -->
               <VueSlickCarousel
                 v-if="this.images.length > 3"
                 v-bind="settings"
@@ -153,10 +147,6 @@
 </template>
 
 <script>
-// This import loads the firebase namespace.
-/* import firebase from 'firebase/app';
-import 'firebase/storage';
- */
 import { listRef } from "~/plugins/firebase.js";
 import VueSlickCarousel from "vue-slick-carousel";
 import "vue-slick-carousel/dist/vue-slick-carousel.css";
@@ -185,34 +175,7 @@ export default {
           { breakpoint: 770, settings: { arrows: false, slidesToShow: 1 } },
         ],
       },
-      image: null,
-      images: [],
-      courselImages: [
-        {
-          id: "1",
-          src: "gallery/274715628_471775764379338_4382020898604230668_n.webp",
-        },
-        {
-          id: "2",
-          src: "gallery/275935764_490839785806269_7383219440987325020_n.webp",
-        },
-        {
-          id: "3",
-          src: "gallery/277804829_501649164725331_7225738029099511224_n.webp",
-        },
-        {
-          id: "4",
-          src: "gallery/278508155_508128010744113_3433975312242100447_n.webp",
-        },
-        {
-          id: "5",
-          src: "gallery/279005256_511788750378039_5903530006355461080_n.webp",
-        },
-        {
-          id: "6",
-          src: "gallery/279019128_511788743711373_1425367768301718400_n.webp",
-        },
-      ],
+      images: []
 
       // windowWidth: window.innerWidth
     };
