@@ -25,7 +25,7 @@ export default {
 
 <style scoped>
 section {
-  height: 700px;
+  height: 800px;
 }
 
 .lds-ring {
