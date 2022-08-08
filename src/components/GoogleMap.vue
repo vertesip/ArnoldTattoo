@@ -293,23 +293,6 @@ export default {
       },
     };
   },
-  created() {
-    if (process.client) {
-      if (localStorage.center) {
-        this.myCoordinates = JSON.parse(localStorage.center);
-      } else {
-        this.$getLocation({})
-          .then((coordinates) => {
-            this.zoom = 5;
-            this.myCoordinates = coordinates;
-          })
-          .catch((error) => console.log(error));
-      }
-      if (localStorage.zoom) {
-        this.zoom = parseInt(localStorage.zoom);
-      }
-    }
-  },
   mounted() {
     this.$refs.mapRef.$mapPromise.then((map) => {
       this.map = map;

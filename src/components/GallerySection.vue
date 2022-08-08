@@ -292,11 +292,19 @@ section {
   transition: all 1s;
 }
 .instagram-pic {
-  height: -webkit-fill-available;
+  margin: 26px;
+  max-width: 340px;
+  max-height: 360px;
+  object-fit: fill;
 }
 @media (min-width: 0px) and (max-width: 339px) {
   .slider {
     height: 490px;
+  }
+  .instagram-pic {
+    margin: 5vw;
+    max-width: 74vw;
+    max-height: 77vw;
   }
 }
 
@@ -304,21 +312,51 @@ section {
   .slider {
     height: 600px;
   }
+  .instagram-pic{
+    margin: 2.112676056338028vw;
+    max-width: 80vw;
+    max-height: 80vw;
+  }
 }
 
 @media (min-width: 581px) and (max-width: 770px) {
   .slider {
     height: 800px;
   }
+  .instagram-pic {
+    margin: 39px;
+    max-width: 506px;
+    max-height: 525px;
 }
-@media (min-width: 768px) and (max-width: 1023px) {
+}
+@media (min-width: 768px) and (max-width: 999px) {
   .slider {
     height: 581px;
+  }
+  .instagram-pic{
+    margin: 24px;
+    max-width: 297px;
+    max-height: 307px;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1023px) {
+.slider {
+    height: 581px;
+  }
+  .instagram-pic {
+    margin: 15px;
+    max-width: 192px;
+    max-height: 199px;
   }
 }
 @media (min-width: 1024px) and (max-width: 1280px) {
   .slider {
     height: 379px;
+  }
+  .instagram-pic {
+    margin: 20px;
+    max-width: 272px;
+    max-height: 282px;
   }
 }
 .slider2 {

@@ -12,9 +12,16 @@
       v-if="this.images.length > 3"
       v-bind="settings"
     >
-      <div class="px-3 image-wrapper" v-for="(image, index) in images" :key="index">
+      <div
+        class="px-3 image-wrapper"
+        v-for="(image, index) in images"
+        :key="index"
+      >
         <div class="flex flex-shrink-0 relative w-full sm:w-auto">
-          <img src="photo.webp" class="object-cover object-center w-full z-10" />
+          <img
+            src="photo.webp"
+            class="object-cover object-center w-full z-10"
+          />
           <img
             class="instagram-pic object-cover object-center w-full z-0 absolute"
             :src="image"
@@ -43,7 +50,7 @@ export default {
   name: "GalleryPage",
   data() {
     return {
-      images: []
+      images: [],
     };
   },
   mounted() {
@@ -72,7 +79,6 @@ export default {
             .catch((error) => {
               // Handle any errors
             });
-          
         });
       })
       .catch((error) => {
@@ -81,13 +87,14 @@ export default {
       });
 
     //console.log(typeof this.images)
-  }
+  },
 };
 </script>
 
 <style scoped>
 html {
   scroll-behavior: smooth;
+  background: #0d0d0d;
 }
 main {
   background: #0d0d0d;
@@ -116,8 +123,15 @@ body {
   flex-direction: column;
 }
 
-.image-wrapper{
+.image-wrapper {
   max-width: 416px;
   margin-top: 20px;
+}
+
+.instagram-pic {
+  margin: 26px;
+  max-width: 340px;
+  max-height: 360px;
+  object-fit: fill;
 }
 </style>

@@ -21,6 +21,7 @@ export default {
 <style scoped>
 html {
   scroll-behavior: smooth;
+  background: #0d0d0d;
 }
 body {
   min-height: 100vh;

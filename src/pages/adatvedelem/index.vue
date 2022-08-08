@@ -951,6 +951,9 @@ export default {
 </script>
 
 <style scoped>
+html{
+  background: #0d0d0d;
+}
 section {
   color: white;
 }
