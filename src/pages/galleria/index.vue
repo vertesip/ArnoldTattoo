@@ -1,7 +1,7 @@
 <template>
   <main>
     <NavBar />
-    <img class="mx-auto mt-20" src="gallery.webp" alt="Gallery header" />
+    <img class="mx-auto mt-20 g-header" src="gallery.webp" alt="Gallery header" />
     <nuxt-link :to="{ path: '/' }" style="border-bottom: none">
       <p class="flex justify-center mt-28 mb-14 text-white text-2xl">
         Vissza a főoldalra
@@ -99,9 +99,7 @@ html {
 main {
   background: #0d0d0d;
 }
-img {
-  height: -webkit-fill-available;
-}
+
 body {
   min-height: 100vh;
   display: flex;
@@ -133,5 +131,19 @@ body {
   max-width: 340px;
   max-height: 360px;
   object-fit: fill;
+}
+
+@media (min-width: 0px) and (max-width: 420px) {
+  .instagram-pic{
+    margin: 2.112676056338028vw;
+    max-width: 85vw;
+    max-height: 90vw;
+  }
+}
+
+.g-header{
+  max-width: 500px;
+  max-height: 150px;
+  width: 100%;
 }
 </style>

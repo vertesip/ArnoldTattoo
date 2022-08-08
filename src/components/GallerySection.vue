@@ -172,6 +172,7 @@ export default {
         infinite: true,
         arrows: false,
         autoplay: true,
+        mobileFirst:true,
         speed: 500,
         slidesToShow: 0,
         slidesToScroll: 1,
