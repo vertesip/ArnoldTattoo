@@ -1,6 +1,11 @@
 <template>
   <main>
     <NavBar />
+      <modal name="fullImageModal"
+      :width="'40%'"
+      :height="'90%'">
+         <img :src=modalImage>
+    </modal>
     <img class="mx-auto mt-20 g-header" src="gallery.webp" alt="Gallery header" />
     <nuxt-link :to="{ path: '/' }" style="border-bottom: none">
       <p class="flex justify-center mt-28 mb-14 text-white text-2xl">
@@ -14,6 +19,7 @@
     >
       <div
         class="px-3 image-wrapper"
+        @click="showImage(image)"
         v-for="(image, index) in images"
         :key="index"
       >
@@ -51,6 +57,7 @@ export default {
   data() {
     return {
       images: [],
+      modalImage: ""
     };
   },
   mounted() {
@@ -86,8 +93,21 @@ export default {
         console.log(error);
       });
 
+    this.hide()
     //console.log(typeof this.images)
   },
+  methods: {
+    show () {
+      this.$modal.show('fullImageModal');
+    },
+    hide () {
+      this.$modal.hide('fullImageModal');
+    },
+    showImage(image) {
+      this.show();
+      this.modalImage = image
+    }
+  }
 };
 </script>
 

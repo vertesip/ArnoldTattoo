@@ -4,6 +4,11 @@
     class="relative"
     style="background-image: linear-gradient( to bottom, rgba(13,13,13,1), rgba(13,13,13,0), rgba(13,13,13,1) ),linear-gradient( to top, rgba(13,13,13,1), rgba(13,13,13,0.8), rgba(13,13,13,1) ),url(background.webp);"
   >
+    <modal name="fullImageModal"
+      :width="'40%'"
+      :height="'90%'">
+         <img :src=modalImage>
+    </modal>
     <div class="lds-ring">
       <div />
       <div />
@@ -107,7 +112,7 @@
                 ref="carousel"
               >
                 <div
-                  class="px-3"
+                  class="px-3" @click="showImage(image)"
                   v-for="(image, index) in images"
                   :key="index"
                 >
@@ -182,7 +187,8 @@ export default {
           { breakpoint: 770, settings: { arrows: false, slidesToShow: 1 } },
         ],
       },
-      images: []
+      images: [],
+      modalImage: ""
 
       // windowWidth: window.innerWidth
     };
@@ -201,6 +207,8 @@ export default {
       } else {
         this.settings.slidesToShow = 1;
       }
+
+      this.hide()
     }
 
     const firebaseApp = getApp();
@@ -248,9 +256,16 @@ export default {
     showPrev() {
       this.$refs.carousel.prev();
     },
-    getImgUrl: function (path) {
-      return require("@/static/" + path);
+    show () {
+      this.$modal.show('fullImageModal');
     },
+    hide () {
+      this.$modal.hide('fullImageModal');
+    },
+    showImage(image) {
+      this.show();
+      this.modalImage = image
+    }
   },
 };
 </script>
@@ -261,6 +276,9 @@ export default {
 section {
   background: #0d0d0d;
   background-size: cover;
+}
+.vm--modal{
+  height: 100%;
 }
 .slider-wrapper {
   display: flex;
@@ -304,7 +322,7 @@ section {
   }
   .instagram-pic {
     margin: 5vw;
-    max-width: 74vw;
+    max-width: 74vw;  
     max-height: 77vw;
   }
 }
