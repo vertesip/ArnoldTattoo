@@ -144,7 +144,7 @@
       </div>
     </div>
       <nuxt-link :to="{ path: '/galleria' }" style="border-bottom: none">
-      <p class="flex justify-center text-white text-2xl">
+      <p class="flex justify-center text-white text-2xl more-pics">
         Kattints ide a többi képért
       </p>
     </nuxt-link>
@@ -296,7 +296,7 @@ section {
   margin: 26px;
   max-width: 340px;
   max-height: 360px;
-  object-fit: fill;
+  object-fit: cover;
 }
 @media (min-width: 0px) and (max-width: 339px) {
   .slider {
@@ -311,7 +311,7 @@ section {
 
 @media (min-width: 340px) and (max-width: 580px) {
   .slider {
-    height: 600px;
+    height: 400px;
   }
   .instagram-pic{
     margin: 2.112676056338028vw;
@@ -358,6 +358,12 @@ section {
     margin: 20px;
     max-width: 272px;
     max-height: 282px;
+  }
+}
+
+@media only screen and (max-width: 649px) {
+  .more-pics{
+        margin-bottom: 60px;
   }
 }
 .slider2 {

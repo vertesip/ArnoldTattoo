@@ -8,7 +8,7 @@
     </div> -->
     <vue-calendly
       url="https://calendly.com/arnoldtattoo"
-      :height="800"
+      :height="900"
     ></vue-calendly>
   </section>
 </template>
@@ -25,7 +25,7 @@ export default {
 
 <style scoped>
 section {
-  height: 800px;
+   height: 900px;
 }
 
 .lds-ring {

@@ -130,7 +130,7 @@ body {
   margin: 26px;
   max-width: 340px;
   max-height: 360px;
-  object-fit: fill;
+  object-fit: cover;
 }
 
 @media (min-width: 0px) and (max-width: 420px) {

@@ -143,24 +143,6 @@
         "
         :class="isOpen ? 'translate-x-0' : '-translate-x-full'"
       >
-        <div class="close">
-          <button
-            class="absolute top-0 right-0 mt-4 mr-4"
-            @click="isOpen = false"
-          >
-            <svg
-              class="w-6 h-6"
-              fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-        </div>
 
         <ul class="font-sans text-white flex flex-col">
           <li @click="isOpen = false">
