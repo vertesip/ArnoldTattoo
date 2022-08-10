@@ -24,7 +24,8 @@ module.exports = {
   plugins: [
     { src: '~/plugins/calendly.js', ssr: false },
     { src: '~plugins/firebase.js' },
-    { src: '~plugins/googlemaps.js' }
+    { src: '~plugins/googlemaps.js' },
+    { src: '~plugins/modal.js', ssr: false }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

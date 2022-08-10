@@ -340,12 +340,12 @@ section {
 
 @media (min-width: 340px) and (max-width: 580px) {
   .slider {
-    height: 400px;
+    height: 600px;
   }
   .instagram-pic{
     margin: 2.112676056338028vw;
-    max-width: 80vw;
-    max-height: 80vw;
+    max-width: 82vw;
+    max-height: 85vw;
   }
 }
 
@@ -354,8 +354,8 @@ section {
     height: 800px;
   }
   .instagram-pic {
-    margin: 39px;
-    max-width: 506px;
+    margin: 35px;
+    max-width: 518px;
     max-height: 525px;
 }
 }
