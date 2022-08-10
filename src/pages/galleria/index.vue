@@ -1,9 +1,16 @@
 <template>
   <main>
     <NavBar />
-      <modal name="fullImageModal"
-      :width="'40%'"
-      :height="'90%'">
+      <modal 
+      ref="listing"
+      name="listing"
+      :adaptive="true"
+      width="90%"
+      :maxWidth="900"
+      height="auto"
+      :scrollable="true"
+      @before-open="handleBeforeOpen"
+    >
          <img :src=modalImage>
     </modal>
     <img class="mx-auto mt-20 g-header" src="gallery.webp" alt="Gallery header" />
@@ -26,7 +33,7 @@
         <div class="flex flex-shrink-0 relative w-full sm:w-auto">
           <img
             src="photo.webp"
-            class="object-cover object-center w-full z-10"
+            class="object-cover object-center w-full z-10 cursor-pointer"
           />
           <img
             class="instagram-pic object-cover object-center w-full z-0 absolute"
@@ -98,15 +105,18 @@ export default {
   },
   methods: {
     show () {
-      this.$modal.show('fullImageModal');
+      this.$modal.show('listing');
     },
     hide () {
-      this.$modal.hide('fullImageModal');
+      this.$modal.hide('listing');
     },
     showImage(image) {
       this.show();
       this.modalImage = image
-    }
+    },
+    handleBeforeOpen() {
+      this.$refs.listing.modal.renderedHeight = "";
+    },
   }
 };
 </script>

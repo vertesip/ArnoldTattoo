@@ -4,9 +4,16 @@
     class="relative"
     style="background-image: linear-gradient( to bottom, rgba(13,13,13,1), rgba(13,13,13,0), rgba(13,13,13,1) ),linear-gradient( to top, rgba(13,13,13,1), rgba(13,13,13,0.8), rgba(13,13,13,1) ),url(background.webp);"
   >
-    <modal name="fullImageModal"
-      :width="'40%'"
-      :height="'90%'">
+    <modal 
+      ref="listing"
+      name="listing"
+      :adaptive="true"
+      width="90%"
+      :maxWidth="900"
+      height="auto"
+      :scrollable="true"
+      @before-open="handleBeforeOpen"
+    >
          <img :src=modalImage>
     </modal>
     <div class="lds-ring">
@@ -116,7 +123,7 @@
                   v-for="(image, index) in images"
                   :key="index"
                 >
-                  <div class="flex flex-shrink-0 relative w-full sm:w-auto">
+                  <div class="flex flex-shrink-0 relative w-full sm:w-auto cursor-pointer">
                     <img
                       src="photo.webp"
                       class="object-cover object-center w-full z-10"
@@ -189,7 +196,6 @@ export default {
       },
       images: [],
       modalImage: ""
-
       // windowWidth: window.innerWidth
     };
   },
@@ -207,7 +213,7 @@ export default {
       } else {
         this.settings.slidesToShow = 1;
       }
-
+      
       this.hide()
     }
 
@@ -247,7 +253,6 @@ export default {
     //console.log(typeof this.images)
   },
   computed: {
-    // a computed getter
   },
   methods: {
     showNext() {
@@ -257,15 +262,18 @@ export default {
       this.$refs.carousel.prev();
     },
     show () {
-      this.$modal.show('fullImageModal');
+      this.$modal.show('listing');
     },
     hide () {
-      this.$modal.hide('fullImageModal');
+      this.$modal.hide('listing');
     },
     showImage(image) {
       this.show();
       this.modalImage = image
-    }
+    },
+     handleBeforeOpen() {
+      this.$refs.listing.modal.renderedHeight = "";
+    },
   },
 };
 </script>
@@ -273,12 +281,15 @@ export default {
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap");
 @import url("https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css");
+
+.vm--container .vm--modal { 
+  max-width: 90vh !important;
+  margin: 10px auto !important;
+}
+
 section {
   background: #0d0d0d;
   background-size: cover;
-}
-.vm--modal{
-  height: 100%;
 }
 .slider-wrapper {
   display: flex;
