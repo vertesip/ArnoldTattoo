@@ -353,7 +353,7 @@ section {
   }
 }
 
-@media (min-width: 581px) and (max-width: 770px) {
+@media (min-width: 581px) and (max-width: 766px) {
   .slider {
     height: 800px;
   }
@@ -363,7 +363,17 @@ section {
     max-height: 525px;
 }
 }
-@media (min-width: 768px) and (max-width: 999px) {
+@media (min-width: 767px) and (max-width: 770px) {
+  .slider {
+    height: 800px;
+  }
+  .instagram-pic {
+    margin: 35px;
+    max-width: 636px;
+    max-height: 642px;
+}
+}
+@media (min-width: 771px) and (max-width: 999px) {
   .slider {
     height: 581px;
   }
