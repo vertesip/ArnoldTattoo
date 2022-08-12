@@ -15,12 +15,12 @@
     </modal>
     <img class="mx-auto mt-20 g-header" src="gallery.webp" alt="Gallery header" />
     <nuxt-link :to="{ path: '/' }" style="border-bottom: none">
-      <p class="flex justify-center mt-28 mb-14 text-white text-2xl">
+      <button class="flex btn btn-blue justify-center text-white text-2xl">
         Vissza a főoldalra
-      </p>
+      </button>
     </nuxt-link>
     <div
-      class="flex flex-wrap justify-center"
+      class="flex flex-wrap justify-center max-w-7xl m-auto"
       v-if="this.images.length > 3"
       v-bind="settings"
     >
@@ -30,7 +30,7 @@
         v-for="(image, index) in images"
         :key="index"
       >
-        <div class="flex flex-shrink-0 relative w-full sm:w-auto">
+        <div class="flex flex-shrink-0 relative w-full sm:w-auto overflow-hidden">
           <img
             src="photo.webp"
             class="object-cover object-center w-full z-10 cursor-pointer"
@@ -161,6 +161,11 @@ body {
   max-width: 340px;
   max-height: 360px;
   object-fit: cover;
+  transition: 0.4s;
+}
+
+.image-wrapper:hover .instagram-pic{
+  transform: scale(1.2);
 }
 
 @media (min-width: 0px) and (max-width: 420px) {
@@ -176,4 +181,24 @@ body {
   max-height: 150px;
   width: 100%;
 }
+
+
+  .btn {
+      @apply font-bold py-2 px-4 rounded;
+    }
+  .btn-blue {
+    background-color: white;
+    color: #0d0d0d;
+    margin: 0 auto;
+    transition: 0.4s;
+    font-weight: 500;
+    padding: 10px 45px;
+    margin-bottom: 3.5rem;
+    margin-top: 7rem;
+    font-weight: 400;
+    font-size: 20px;
+  }
+  .btn-blue:hover {
+   background-color: #c3c3bf;
+  }
 </style>

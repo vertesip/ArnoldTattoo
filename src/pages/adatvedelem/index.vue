@@ -4,10 +4,10 @@
     <div class="h-28" />
     <nuxt-link
       :to="{ path: '/' }"
-      style="border-bottom: none"
-      class="h-14 flex justify-center"
     >
-      <p class="flex justify-center text-white text-2xl">Vissza a főoldalra</p>
+     <button class="flex btn btn-blue justify-center text-white text-2xl">
+        Vissza a főoldalra
+      </button>
     </nuxt-link>
     <section>
       <div class="flex flex-wrap justify-center break-all">
@@ -967,4 +967,22 @@ main {
   margin-left: max(20vw, 12px);
   margin-right: max(20vw, 12px);
 }
+
+ .btn {
+      @apply font-bold py-2 px-4 rounded;
+    }
+  .btn-blue {
+    background-color: white;
+    color: #0d0d0d;
+    margin: 0 auto;
+    transition: 0.4s;
+    font-weight: 500;
+    padding: 10px 45px;
+    margin-bottom: 3.5rem;
+    font-weight: 400;
+    font-size: 20px;
+  }
+  .btn-blue:hover {
+   background-color: #c3c3bf;
+  }
 </style>

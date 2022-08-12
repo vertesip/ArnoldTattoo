@@ -123,7 +123,7 @@
                   v-for="(image, index) in images"
                   :key="index"
                 >
-                  <div class="flex flex-shrink-0 relative w-full sm:w-auto cursor-pointer">
+                  <div class="flex flex-shrink-0 relative w-full sm:w-auto cursor-pointer overflow-hidden">
                     <img
                       src="photo.webp"
                       class="object-cover object-center w-full z-10"
@@ -156,9 +156,9 @@
       </div>
     </div>
       <nuxt-link :to="{ path: '/galleria' }" style="border-bottom: none">
-      <p class="flex justify-center text-white text-2xl more-pics">
+      <button class="btn btn-blue flex justify-center text-white text-2xl more-pics">
         Kattints ide a többi képért
-      </p>
+      </button>
     </nuxt-link>
   </section>
 </template>
@@ -326,6 +326,10 @@ section {
   max-width: 340px;
   max-height: 360px;
   object-fit: cover;
+  transition: 0.4s;
+}
+.slick-slide:hover .instagram-pic{
+  transform: scale(1.2);
 }
 @media (min-width: 0px) and (max-width: 339px) {
   .slider {
@@ -392,7 +396,7 @@ section {
 
 @media only screen and (max-width: 649px) {
   .more-pics{
-        margin-bottom: 60px;
+        margin-bottom: 60px !important;
   }
 }
 .slider2 {
@@ -458,4 +462,21 @@ section {
     transform: rotate(360deg);
   }
 }
+
+  .btn {
+      @apply font-bold py-2 px-4 rounded;
+    }
+  .btn-blue {
+    background-color: white;
+    color: #0d0d0d;
+    margin: 0 auto;
+    transition: 0.4s;
+    font-weight: 500;
+    padding: 10px 45px;
+    font-weight: 400;
+    font-size: 20px;
+  }
+  .btn-blue:hover {
+   background-color: #c3c3bf;
+  }
 </style>

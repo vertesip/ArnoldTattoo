@@ -82,7 +82,7 @@
       active border-b-2 pb-1
       -->
       <div class="hidden md:block">
-        <ul class="flex space-x-8 text-sm font-sans text-white">
+        <ul class="flex space-x-8 text-sm font-sans text-white nav-links">
           <li>
             <nuxt-link :to="{ path: '/', hash: '#about-me' }">Rólam</nuxt-link>
           </li>
@@ -377,4 +377,14 @@ aside > ul {
   padding-bottom: 0.25rem;
   border-bottom-color: #aa923b;
 } */
+.nav-links li a{
+ transition: 0.2s;
+ border-bottom-color: #aa923b;
+}
+
+.nav-links li a:hover{
+  border-bottom-width: 2px;
+  padding-bottom: 0.25rem;
+  border-bottom-color: #aa923b;
+}
 </style>
