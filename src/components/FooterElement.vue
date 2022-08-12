@@ -52,13 +52,13 @@
           </a>
         </div>
       </div>
-      <ul class="flex flex-wrap items-center mt-3 text-sm text-white sm:mt-0">
+      <!-- <ul class="flex flex-wrap items-center mt-3 text-sm text-white sm:mt-0">
         <li>
           <nuxt-link :to="{ path: '/adatvedelem' }" style="border-bottom: none"
             >Adatvédelmi nyilatkozat</nuxt-link
           >
         </li>
-      </ul>
+      </ul> -->
     </div>
   </footer>
 </template>
