@@ -2,9 +2,23 @@
   <section
     id="gallery"
     class="relative"
-    style="background-image: linear-gradient( to bottom, rgba(13,13,13,1), rgba(13,13,13,0), rgba(13,13,13,1) ),linear-gradient( to top, rgba(13,13,13,1), rgba(13,13,13,0.8), rgba(13,13,13,1) ),url(background.webp);"
+    style="
+      background-image: linear-gradient(
+          to bottom,
+          rgba(13, 13, 13, 1),
+          rgba(13, 13, 13, 0),
+          rgba(13, 13, 13, 1)
+        ),
+        linear-gradient(
+          to top,
+          rgba(13, 13, 13, 1),
+          rgba(13, 13, 13, 0.8),
+          rgba(13, 13, 13, 1)
+        ),
+        url(background.webp);
+    "
   >
-    <modal 
+    <modal
       ref="listing"
       name="listing"
       :adaptive="true"
@@ -14,7 +28,7 @@
       :scrollable="true"
       @before-open="handleBeforeOpen"
     >
-         <img :src=modalImage>
+      <img :src="modalImage" />
     </modal>
     <div class="lds-ring">
       <div />
@@ -100,16 +114,7 @@
           </button>
         </div>
         <div
-          class="
-            flex
-            items-center
-            justify-center
-            w-full
-            h-full
-            py-24
-            sm:py-8
-            px-4
-          "
+          class="flex items-center justify-center w-full h-full sm:py-8 px-4"
         >
           <div class="slider">
             <div class="slide-ana">
@@ -119,11 +124,21 @@
                 ref="carousel"
               >
                 <div
-                  class="px-3" @click="showImage(image)"
+                  class="px-3"
+                  @click="showImage(image)"
                   v-for="(image, index) in images"
                   :key="index"
                 >
-                  <div class="flex flex-shrink-0 relative w-full sm:w-auto cursor-pointer overflow-hidden">
+                  <div
+                    class="
+                      flex flex-shrink-0
+                      relative
+                      w-full
+                      sm:w-auto
+                      cursor-pointer
+                      overflow-hidden
+                    "
+                  >
                     <img
                       src="photo.webp"
                       class="object-cover object-center w-full z-10"
@@ -136,7 +151,7 @@
                         z-0
                         absolute
                       "
-                      :src=image
+                      :src="image"
                     />
                     <div
                       class="
@@ -155,8 +170,10 @@
         </div>
       </div>
     </div>
-      <nuxt-link :to="{ path: '/galleria' }" style="border-bottom: none">
-      <button class="btn btn-blue flex justify-center text-white text-2xl more-pics">
+    <nuxt-link :to="{ path: '/galleria' }" style="border-bottom: none">
+      <button
+        class="btn btn-blue flex justify-center text-white text-2xl more-pics"
+      >
         Kattints ide a többi képért
       </button>
     </nuxt-link>
@@ -164,7 +181,6 @@
 </template>
 
 <script>
-
 import { listRef } from "~/plugins/firebase.js";
 import VueSlickCarousel from "vue-slick-carousel";
 import "vue-slick-carousel/dist/vue-slick-carousel.css";
@@ -184,7 +200,7 @@ export default {
         infinite: true,
         arrows: false,
         autoplay: true,
-        mobileFirst:true,
+        mobileFirst: true,
         speed: 500,
         slidesToShow: 0,
         slidesToScroll: 1,
@@ -195,7 +211,7 @@ export default {
         ],
       },
       images: [],
-      modalImage: ""
+      modalImage: "",
       // windowWidth: window.innerWidth
     };
   },
@@ -213,8 +229,8 @@ export default {
       } else {
         this.settings.slidesToShow = 1;
       }
-      
-      this.hide()
+
+      this.hide();
     }
 
     const firebaseApp = getApp();
@@ -242,7 +258,6 @@ export default {
             .catch((error) => {
               // Handle any errors
             });
-          
         });
       })
       .catch((error) => {
@@ -252,8 +267,7 @@ export default {
 
     //console.log(typeof this.images)
   },
-  computed: {
-  },
+  computed: {},
   methods: {
     showNext() {
       this.$refs.carousel.next();
@@ -261,17 +275,17 @@ export default {
     showPrev() {
       this.$refs.carousel.prev();
     },
-    show () {
-      this.$modal.show('listing');
+    show() {
+      this.$modal.show("listing");
     },
-    hide () {
-      this.$modal.hide('listing');
+    hide() {
+      this.$modal.hide("listing");
     },
     showImage(image) {
       this.show();
-      this.modalImage = image
+      this.modalImage = image;
     },
-     handleBeforeOpen() {
+    handleBeforeOpen() {
       this.$refs.listing.modal.renderedHeight = "";
     },
   },
@@ -282,10 +296,10 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap");
 @import url("https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css");
 
-#gallery{
+#gallery {
   padding-bottom: 40px;
 }
-.vm--container .vm--modal { 
+.vm--container .vm--modal {
   max-width: 90vh !important;
   margin: 10px auto !important;
 }
@@ -331,7 +345,7 @@ section {
   object-fit: cover;
   transition: 0.4s;
 }
-.slick-slide:hover .instagram-pic{
+.slick-slide:hover .instagram-pic {
   transform: scale(1.2);
 }
 @media (min-width: 0px) and (max-width: 339px) {
@@ -340,7 +354,7 @@ section {
   }
   .instagram-pic {
     margin: 5vw;
-    max-width: 74vw;  
+    max-width: 74vw;
     max-height: 77vw;
   }
 }
@@ -349,7 +363,7 @@ section {
   .slider {
     height: 600px;
   }
-  .instagram-pic{
+  .instagram-pic {
     margin: 2.112676056338028vw;
     max-width: 82vw;
     max-height: 85vw;
@@ -364,7 +378,7 @@ section {
     margin: 35px;
     max-width: 518px;
     max-height: 525px;
-}
+  }
 }
 @media (min-width: 767px) and (max-width: 770px) {
   .slider {
@@ -374,20 +388,20 @@ section {
     margin: 35px;
     max-width: 636px;
     max-height: 642px;
-}
+  }
 }
 @media (min-width: 771px) and (max-width: 999px) {
   .slider {
     height: 581px;
   }
-  .instagram-pic{
+  .instagram-pic {
     margin: 24px;
     max-width: 297px;
     max-height: 307px;
   }
 }
 @media (min-width: 1000px) and (max-width: 1023px) {
-.slider {
+  .slider {
     height: 581px;
   }
   .instagram-pic {
@@ -408,8 +422,11 @@ section {
 }
 
 @media only screen and (max-width: 649px) {
-  .more-pics{
-        margin-bottom: 60px !important;
+  .more-pics {
+    margin-bottom: 60px !important;
+  }
+  #gallery {
+    padding-bottom: 0;
   }
 }
 .slider2 {
@@ -476,20 +493,20 @@ section {
   }
 }
 
-  .btn {
-      @apply font-bold py-2 px-4 rounded;
-    }
-  .btn-blue {
-    background-color: white;
-    color: #0d0d0d;
-    margin: 0 auto;
-    transition: 0.4s;
-    font-weight: 500;
-    padding: 10px 45px;
-    font-weight: 400;
-    font-size: 20px;
-  }
-  .btn-blue:hover {
-   background-color: #c3c3bf;
-  }
+.btn {
+  @apply font-bold py-2 px-4 rounded;
+}
+.btn-blue {
+  background-color: white;
+  color: #0d0d0d;
+  margin: 0 auto;
+  transition: 0.4s;
+  font-weight: 500;
+  padding: 10px 45px;
+  font-weight: 400;
+  font-size: 20px;
+}
+.btn-blue:hover {
+  background-color: #c3c3bf;
+}
 </style>
