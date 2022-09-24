@@ -87,11 +87,11 @@
             <nuxt-link :to="{ path: '/', hash: '#about-me' }">Rólam</nuxt-link>
           </li>
           <li><nuxt-link :to="{ path: '/galleria' }">Galéria</nuxt-link></li>
-          <li>
+         <!--  <li>
             <nuxt-link :to="{ path: '/', hash: '#booking' }"
               >Időpontfoglalás</nuxt-link
             >
-          </li>
+          </li> -->
           <li>
             <nuxt-link :to="{ path: '/', hash: '#shirts' }">Pólók</nuxt-link>
           </li>
@@ -151,11 +151,11 @@
           <li @click="isOpen = false">
             <nuxt-link :to="{ path: '/galleria' }">Galéria</nuxt-link>
           </li>
-          <li @click="isOpen = false">
+          <!-- <li @click="isOpen = false">
             <nuxt-link :to="{ path: '/', hash: '#booking' }"
               >Időpontfoglalás</nuxt-link
             >
-          </li>
+          </li> -->
           <li @click="isOpen = false">
             <nuxt-link :to="{ path: '/', hash: '#shirts' }">Pólók</nuxt-link>
           </li>
