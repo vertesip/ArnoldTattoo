@@ -2,22 +2,22 @@
   {
     "name": "adatvedelem",
     "path": "/adatvedelem",
-    "component": "D:\\\\www\\\\ArnoldTattoo\\\\src\\\\pages\\\\adatvedelem\\\\index.vue",
+    "component": "/home/patrik/dev/ArnoldNew/ArnoldTattoo/src/pages/adatvedelem/index.vue",
     "chunkName": "pages/adatvedelem/index",
-    "_name": "_5bf95f44"
+    "_name": "_75a5a356"
   },
   {
     "name": "galleria",
     "path": "/galleria",
-    "component": "D:\\\\www\\\\ArnoldTattoo\\\\src\\\\pages\\\\galleria\\\\index.vue",
+    "component": "/home/patrik/dev/ArnoldNew/ArnoldTattoo/src/pages/galleria/index.vue",
     "chunkName": "pages/galleria/index",
-    "_name": "_7e45fce9"
+    "_name": "_952fb664"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "D:\\\\www\\\\ArnoldTattoo\\\\src\\\\pages\\\\index.vue",
+    "component": "/home/patrik/dev/ArnoldNew/ArnoldTattoo/src/pages/index.vue",
     "chunkName": "pages/index",
-    "_name": "_25e200a8"
+    "_name": "_4fc93654"
   }
 ]

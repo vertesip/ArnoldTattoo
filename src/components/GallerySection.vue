@@ -141,7 +141,7 @@
                   >
                     <img
                       src="photo.webp"
-                      class="object-cover object-center w-full z-10"
+                      class="object-contain object-center w-full z-10"
                     />
                     <img
                       class="

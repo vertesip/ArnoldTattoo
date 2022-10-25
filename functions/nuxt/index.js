@@ -12,13 +12,13 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 
 /* Plugins */
 
-import nuxt_plugin_plugin_3f30e571 from 'nuxt_plugin_plugin_3f30e571' // Source: .\\components\\plugin.js (mode: 'all')
-import nuxt_plugin_axios_23083b14 from 'nuxt_plugin_axios_23083b14' // Source: .\\axios.js (mode: 'all')
-import nuxt_plugin_index_5b9bb627 from 'nuxt_plugin_index_5b9bb627' // Source: .\\firebase\\index.js (mode: 'all')
-import nuxt_plugin_calendly_4c5b0432 from 'nuxt_plugin_calendly_4c5b0432' // Source: ..\\plugins\\calendly.js (mode: 'client')
-import nuxt_plugin_firebase_087e9259 from 'nuxt_plugin_firebase_087e9259' // Source: ..\\plugins\\firebase.js (mode: 'all')
-import nuxt_plugin_googlemaps_53528530 from 'nuxt_plugin_googlemaps_53528530' // Source: ..\\plugins\\googlemaps.js (mode: 'all')
-import nuxt_plugin_modal_6299f5fe from 'nuxt_plugin_modal_6299f5fe' // Source: ..\\plugins\\modal.js (mode: 'client')
+import nuxt_plugin_plugin_0012a5f2 from 'nuxt_plugin_plugin_0012a5f2' // Source: ./components/plugin.js (mode: 'all')
+import nuxt_plugin_axios_75cea7f0 from 'nuxt_plugin_axios_75cea7f0' // Source: ./axios.js (mode: 'all')
+import nuxt_plugin_index_19fcd6f4 from 'nuxt_plugin_index_19fcd6f4' // Source: ./firebase/index.js (mode: 'all')
+import nuxt_plugin_calendly_4c5b0432 from 'nuxt_plugin_calendly_4c5b0432' // Source: ../plugins/calendly.js (mode: 'client')
+import nuxt_plugin_firebase_087e9259 from 'nuxt_plugin_firebase_087e9259' // Source: ../plugins/firebase.js (mode: 'all')
+import nuxt_plugin_googlemaps_53528530 from 'nuxt_plugin_googlemaps_53528530' // Source: ../plugins/googlemaps.js (mode: 'all')
+import nuxt_plugin_modal_6299f5fe from 'nuxt_plugin_modal_6299f5fe' // Source: ../plugins/modal.js (mode: 'client')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -182,16 +182,16 @@ async function createApp(ssrContext, config = {}) {
   }
   // Plugin execution
 
-  if (typeof nuxt_plugin_plugin_3f30e571 === 'function') {
-    await nuxt_plugin_plugin_3f30e571(app.context, inject)
+  if (typeof nuxt_plugin_plugin_0012a5f2 === 'function') {
+    await nuxt_plugin_plugin_0012a5f2(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_axios_23083b14 === 'function') {
-    await nuxt_plugin_axios_23083b14(app.context, inject)
+  if (typeof nuxt_plugin_axios_75cea7f0 === 'function') {
+    await nuxt_plugin_axios_75cea7f0(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_index_5b9bb627 === 'function') {
-    await nuxt_plugin_index_5b9bb627(app.context, inject)
+  if (typeof nuxt_plugin_index_19fcd6f4 === 'function') {
+    await nuxt_plugin_index_19fcd6f4(app.context, inject)
   }
 
   if (process.client && typeof nuxt_plugin_calendly_4c5b0432 === 'function') {

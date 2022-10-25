@@ -4,9 +4,9 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _5bf95f44 = () => interopDefault(import('..\\pages\\adatvedelem\\index.vue' /* webpackChunkName: "pages/adatvedelem/index" */))
-const _7e45fce9 = () => interopDefault(import('..\\pages\\galleria\\index.vue' /* webpackChunkName: "pages/galleria/index" */))
-const _25e200a8 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
+const _75a5a356 = () => interopDefault(import('../pages/adatvedelem/index.vue' /* webpackChunkName: "pages/adatvedelem/index" */))
+const _952fb664 = () => interopDefault(import('../pages/galleria/index.vue' /* webpackChunkName: "pages/galleria/index" */))
+const _4fc93654 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
 
@@ -21,15 +21,15 @@ export const routerOptions = {
 
   routes: [{
     path: "/adatvedelem",
-    component: _5bf95f44,
+    component: _75a5a356,
     name: "adatvedelem"
   }, {
     path: "/galleria",
-    component: _7e45fce9,
+    component: _952fb664,
     name: "galleria"
   }, {
     path: "/",
-    component: _25e200a8,
+    component: _4fc93654,
     name: "index"
   }],
 
