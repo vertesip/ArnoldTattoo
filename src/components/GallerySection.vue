@@ -293,6 +293,7 @@ export default {
 };
 </script>
 
+
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap");
 @import url("https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css");
