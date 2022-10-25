@@ -141,7 +141,7 @@
                   >
                     <img
                       src="photo.webp"
-                      class="object-cover object-center w-full z-10"
+                      class="object-contain object-center w-full z-10"
                     />
                     <img
                       class="
@@ -202,10 +202,11 @@ export default {
         autoplay: true,
         mobileFirst: true,
         speed: 500,
-        slidesToShow: 0,
+        slidesToShow: 3,
         slidesToScroll: 1,
         touchThreshold: 5,
         responsive: [
+          { breakpoint: 2000, settings: { slidesToShow: 3 } },
           { breakpoint: 1000, settings: { arrows: false, slidesToShow: 2 } },
           { breakpoint: 770, settings: { arrows: false, slidesToShow: 1 } },
         ],
