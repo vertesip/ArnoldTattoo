@@ -92,9 +92,9 @@
               >Időpontfoglalás</nuxt-link
             >
           </li> -->
-          <li>
+    <!--       <li>
             <nuxt-link :to="{ path: '/', hash: '#shirts' }">Pólók</nuxt-link>
-          </li>
+          </li> -->
           <li>
             <nuxt-link :to="{ path: '/', hash: '#googleMap' }"
               >Kapcsolat</nuxt-link
@@ -156,9 +156,9 @@
               >Időpontfoglalás</nuxt-link
             >
           </li> -->
-          <li @click="isOpen = false">
+  <!--         <li @click="isOpen = false">
             <nuxt-link :to="{ path: '/', hash: '#shirts' }">Pólók</nuxt-link>
-          </li>
+          </li> -->
           <li @click="isOpen = false">
             <nuxt-link :to="{ path: '/', hash: '#googleMap' }"
               >Kapcsolat</nuxt-link

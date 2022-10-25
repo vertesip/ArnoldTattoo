@@ -19,6 +19,11 @@ export default {
 </script>
 
 <style scoped>
+* {
+  min-height: 0;
+  min-width: 0;
+}
+
 html {
   scroll-behavior: smooth;
   background: #0d0d0d;

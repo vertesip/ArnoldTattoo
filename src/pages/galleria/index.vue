@@ -1,7 +1,7 @@
 <template>
   <main>
     <NavBar />
-      <modal 
+    <modal
       ref="listing"
       name="listing"
       :adaptive="true"
@@ -11,9 +11,13 @@
       :scrollable="true"
       @before-open="handleBeforeOpen"
     >
-         <img :src=modalImage>
+      <img :src="modalImage" />
     </modal>
-    <img class="mx-auto mt-20 g-header" src="gallery.webp" alt="Gallery header" />
+    <img
+      class="mx-auto mt-20 g-header"
+      src="gallery.webp"
+      alt="Gallery header"
+    />
     <nuxt-link :to="{ path: '/' }" style="border-bottom: none">
       <button class="flex btn btn-blue justify-center text-white text-2xl">
         Vissza a főoldalra
@@ -30,7 +34,9 @@
         v-for="(image, index) in images"
         :key="index"
       >
-        <div class="flex flex-shrink-0 relative w-full sm:w-auto overflow-hidden">
+        <div
+          class="flex flex-shrink-0 relative w-full sm:w-auto overflow-hidden"
+        >
           <img
             src="photo.webp"
             class="object-cover object-center w-full z-10 cursor-pointer"
@@ -64,7 +70,7 @@ export default {
   data() {
     return {
       images: [],
-      modalImage: ""
+      modalImage: "",
     };
   },
   mounted() {
@@ -100,28 +106,33 @@ export default {
         console.log(error);
       });
 
-    this.hide()
+    this.hide();
     //console.log(typeof this.images)
   },
   methods: {
-    show () {
-      this.$modal.show('listing');
+    show() {
+      this.$modal.show("listing");
     },
-    hide () {
-      this.$modal.hide('listing');
+    hide() {
+      this.$modal.hide("listing");
     },
     showImage(image) {
       this.show();
-      this.modalImage = image
+      this.modalImage = image;
     },
     handleBeforeOpen() {
       this.$refs.listing.modal.renderedHeight = "";
     },
-  }
+  },
 };
 </script>
 
 <style scoped>
+* {
+  min-height: 0;
+  min-width: 0;
+}
+
 html {
   scroll-behavior: smooth;
   background: #0d0d0d;
@@ -164,41 +175,40 @@ body {
   transition: 0.4s;
 }
 
-.image-wrapper:hover .instagram-pic{
+.image-wrapper:hover .instagram-pic {
   transform: scale(1.2);
 }
 
 @media (min-width: 0px) and (max-width: 420px) {
-  .instagram-pic{
+  .instagram-pic {
     margin: 2.112676056338028vw;
     max-width: 85vw;
     max-height: 90vw;
   }
 }
 
-.g-header{
+.g-header {
   max-width: 500px;
   max-height: 150px;
   width: 100%;
 }
 
-
-  .btn {
-      @apply font-bold py-2 px-4 rounded;
-    }
-  .btn-blue {
-    background-color: white;
-    color: #0d0d0d;
-    margin: 0 auto;
-    transition: 0.4s;
-    font-weight: 500;
-    padding: 10px 45px;
-    margin-bottom: 3.5rem;
-    margin-top: 7rem;
-    font-weight: 400;
-    font-size: 20px;
-  }
-  .btn-blue:hover {
-   background-color: #c3c3bf;
-  }
+.btn {
+  @apply font-bold py-2 px-4 rounded;
+}
+.btn-blue {
+  background-color: white;
+  color: #0d0d0d;
+  margin: 0 auto;
+  transition: 0.4s;
+  font-weight: 500;
+  padding: 10px 45px;
+  margin-bottom: 3.5rem;
+  margin-top: 7rem;
+  font-weight: 400;
+  font-size: 20px;
+}
+.btn-blue:hover {
+  background-color: #c3c3bf;
+}
 </style>
