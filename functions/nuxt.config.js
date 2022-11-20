@@ -39,12 +39,7 @@ module.exports = {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: ['@nuxtjs/firebase',
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/axios',
-    '@nuxtjs/gtm'
-  ],
-  gtm: {
-    id: 'G-J7RN6XQB9J'
-  },
+    '@nuxtjs/axios'],
   firebase: {
     config: {
       apiKey: 'AIzaSyCAi1U-S3YNGcG-YitKZh_5FVV6GaaQOE4',
