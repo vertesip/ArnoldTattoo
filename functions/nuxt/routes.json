@@ -3,21 +3,18 @@
     "name": "adatvedelem",
     "path": "/adatvedelem",
     "component": "/home/patrik/dev/ArnoldNew/ArnoldTattoo/src/pages/adatvedelem/index.vue",
-    "chunkName": "pages/adatvedelem/index",
-    "_name": "_75a5a356"
+    "chunkName": "pages/adatvedelem/index"
   },
   {
     "name": "galleria",
     "path": "/galleria",
     "component": "/home/patrik/dev/ArnoldNew/ArnoldTattoo/src/pages/galleria/index.vue",
-    "chunkName": "pages/galleria/index",
-    "_name": "_952fb664"
+    "chunkName": "pages/galleria/index"
   },
   {
     "name": "index",
     "path": "/",
     "component": "/home/patrik/dev/ArnoldNew/ArnoldTattoo/src/pages/index.vue",
-    "chunkName": "pages/index",
-    "_name": "_4fc93654"
+    "chunkName": "pages/index"
   }
 ]
