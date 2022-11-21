@@ -57,7 +57,9 @@ module.exports = {
       realtimeDb: true
     }
   },
-
+  analytics: {
+    collectionEnabled: true
+  },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     transpile: [/^vue2-google-maps($|\/)/],
