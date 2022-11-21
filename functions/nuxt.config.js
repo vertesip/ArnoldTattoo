@@ -54,11 +54,9 @@ module.exports = {
     services: {
       auth: true,
       firestore: true,
-      realtimeDb: true
+      realtimeDb: true,
+      analytics: true
     }
-  },
-  analytics: {
-    collectionEnabled: true
   },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
